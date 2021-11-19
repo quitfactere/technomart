@@ -9,7 +9,9 @@
     </head>
     <body>
         <header class="main-header">
-            <a class="logo"><img src="https://via.placeholder.com/220x47" alt="Логотип"></a>
+          <div style="background-color: red;">
+            <a class="logo"><img src="img/logo-technomart.png" width="118" height="18" alt="Логотип"></a>
+          </div>  
             <input type="text" name="search" placeholder="Поиск:">
             <ul>
                 <li><a href="#">Закладки: 0</a></li>
@@ -40,34 +42,50 @@
           <h1>Техномарт</h1>
           <section class="promo">
             <h2 class="visually-hidden">Промо блок</h2>
-            <ul class="promo-list">
-              <li class="promo-list-item">
+              <div class="promo-item" style="background-color: yellow;">
                 <h3>Материалы</h3>
                 <a href="#">На любой вкус</a>
-              </li>
-              <li class="promo-list-item">
+                <img src="img/promo/materials.svg" width="44" height="65" alt="Материалы для ремонта">
+              </div>
+              <div class="promo-item">
                 <h3>Инструмент</h3>
                 <a href="#">На все случаи</a>
-              </li>
-              <li class="promo-list-item">
+                <img src="img/promo/tools.svg" width="75" height="61" alt="Инструмент для ремонта">
+              </div>
+              <div class="promo-item">
                 <h3>Техника</h3>
                 <a href="#">Для стройки</a>
-              </li>
-              <li class="promo-list-item">
+                <img src="img/promo/machinery.svg" width="78" height="62" alt="Для стройки">
+              </div>
+              <div class="promo-item">
                 <h3>Скидки 50%</h3>
                 <a href="#">На 350 товаров</a>
-              </li>
-              <li class="promo-list-item">
+                <img src="img/promo/discount.svg" width="59" height="72" alt="Скидки на 350 товаров">
+              </div>
+              <div class="promo-item">
                 <h3>Доставка</h3>
                 <a href="#">Бесплатно</a>
-              </li>
-            </ul>
+                <img src="img/promo/delivery.svg" width="78" height="63" alt="Доставка бесплатно">
+              </div>
             <div class="promo-slider">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <button type="button" name="previous-slide">Назад</button>
-              <button type="button" name="next-slide">Вперёд</button>
-              <a href="catalog.html">Открыть каталог</a>
+              <div class="slider-perfs">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+                <button type="button" name="previous-slide">Назад</button>
+                <button type="button" name="next-slide">Вперёд</button>
+                <a href="catalog.html">Открыть каталог</a>
+                <img src="img/promo/slider_perfs.jpg" width="620" height="266" alt="Рабочий с перфоратором">
+              </div>
+              <div class="slider-drill">
+                <h3>Дрели</h3>
+                <p>Соседям на радость</p>
+                <button type="button" name="previous-slide">Назад</button>
+                <button type="button" name="next-slide">Вперёд</button>
+                <a href="catalog.html">Открыть каталог</a>
+                <img src="img/promo/slider_drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
+              </div>
+              <button type="button">Слайд 1</button>
+              <button type="button">Слайд 2</button>
             </div>
           </section>
           <section class="popular-goods">
@@ -75,27 +93,27 @@
             <a href="#">Все популярные товары</a>
             <ul class="popular-goods-list">
               <li class="popular-goods-list-item">
-                  <img src="https://via.placeholder.com/184x164" alt="">
+                <img src="img/goods/BFG_9000.jpg" width="184" height="164" alt="Перфоратор Bosch BFG 9000">
                   <p><b>Перфоратор Bosch BFG 9000</b></p>
                   <p><del>32500</del></p>
                   <a href="#">25500 Р.</a>
               </li>
               <li class="popular-goods-list-item">
                 <p>New</p>
-                <img src="https://via.placeholder.com/127x112" alt="">
+                <img src="img/goods/BFG_3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
                 <p><b>Перфоратор Bosch BFG 3000</b></p>
                 <p><del>25500</del></p>
                 <a href="#">15500 Р.</a>
               </li>
               <li class="popular-goods-list-item">
-                <img src="https://via.placeholder.com/144x128" alt="">
+                <img src="img/goods/BFG_3000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
                 <p><b>Перфоратор Bosch BFG 6000</b></p>
                 <p><del>30500</del></p>
                 <a href="#">25500 Р.</a>
               </li>
               <li class="popular-goods-list-item">
                 <p>New</p>
-                <img src="https://via.placeholder.com/127x112" alt="">
+                <img src="img/goods/BFG_2000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
                 <p><b>Перфоратор Bosch BFG 2000</b></p>
                 <p><del>22500</del></p>
                 <a href="#">12500 Р.</a>
@@ -106,14 +124,14 @@
             <h2>Популярные производители:</h2>
             <a href="#">Все производители</a>
             <ul class="manufacturers-list">
-              <li><a href="#"><img src="https://via.placeholder.com/126x31" alt="">Bosch</a></li>
-              <li><a href="#"><img src="https://via.placeholder.com/123x40" alt="">Makita</a></li>
-              <li><a href="#"><img src="https://via.placeholder.com/146x44" alt="">DeWalt</a></li>
-              <li><a href="#"><img src="https://via.placeholder.com/200x75" alt="">Интерскол</a></li>
-              <li><a href="#"><img src="https://via.placeholder.com/169x31" alt="">Hitachi</a></li>
-              <li><a href="#"><img src="https://via.placeholder.com/121x73" alt="">LG</a></li>
-              <li><a href="#"><img src="https://via.placeholder.com/151x96" alt="">AEG</a></li>
-              <li><a href="#"><img src="https://via.placeholder.com/204x69" alt="">metabo</a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/bosch.png" width="126" height="31" alt="Логотип Bosch"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/Makita.png" width="123" height="40" alt="Логотип Makita"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/DeWALT.png" width="146" height="44" alt="Логотип DeWalt"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/interskol.svg" width="200" height="76" alt="Логотип Интерскол"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/Hitachi.png" width="169" height="31" alt="Логотип Hitachi"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/LG.png" width="121" height="73" alt="Логотип LG"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/AEG.png" width="151" height="96" alt="Логотип AEG"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/Metabo.png" width="204" height="69" alt="Логотип Metabo"></a></li>
             </ul>
           </section>
           <section class="services">
