@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +7,10 @@
         <link rel="icon" href="favicon.ico">
         <link rel="icon" href="img/Favicon/icon.svg" type="image/svg+xml">
     </head>
-    <body>
+    <body class="page-body">
         <header class="main-header">
           <div style="background-color: red;">
-            <p>Техномарт</p>
+            <a class="main-header-logo"><img src="img/logo-technomart.png" width="108" height="18" alt="Логотип магазина строительного инструмента"></a>
           </div>  
             <input type="text" name="search" placeholder="Поиск:">
             <ul>
@@ -23,11 +23,11 @@
             г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
             </p>
             <ul>
-                <li><a href="#">Войти</a></li>
-                <li><a href="#">Регистрация</a></li>
+                <li><a class="login-link" href="#">Войти</a></li>
+                <li><a class="registration-link" href="#">Регистрация</a></li>
             </ul>
-            <nav>
-                <ul class="main-navigation">
+            <nav class="main-navigation">
+                <ul class="site-navigation">
                     <li><a href="#">Главная</a></li>
                     <li><a href="#">Компания</a></li>
                     <li><a href="catalog.html">Каталог</a></li>
@@ -38,7 +38,7 @@
                 </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           <h1>Техномарт</h1>
           <section class="promo">
             <h2 class="visually-hidden">Промо блок</h2>
@@ -71,8 +71,8 @@
               <div class="slider-perfs">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
-                <button type="button" name="previous-slide">Назад</button>
-                <button type="button" name="next-slide">Вперёд</button>
+                <button class="slider-button-back" type="button" name="previous-slide">Назад</button>
+                <button class="slider-button-next" type="button" name="next-slide">Вперёд</button>
                 <a href="catalog.html">Открыть каталог</a>
                 <img src="img/promo/slider_perfs.jpg" width="620" height="266" alt="Рабочий с перфоратором">
               </div>
@@ -127,7 +127,7 @@
               <li><a href="#"><img src="img/logos_manufacturers/bosch.png" width="126" height="31" alt="Логотип Bosch"></a></li>
               <li><a href="#"><img src="img/logos_manufacturers/Makita.png" width="123" height="40" alt="Логотип Makita"></a></li>
               <li><a href="#"><img src="img/logos_manufacturers/DeWALT.png" width="146" height="44" alt="Логотип DeWalt"></a></li>
-              <li><a href="#"><img src="img/logos_manufacturers/interskol.svg" width="200" height="76" alt="Логотип Интерскол"></a></li>
+              <li><a href="#"><img src="img/logos_manufacturers/Interskol.png" width="200" height="76" alt="Логотип Интерскол"></a></li>
               <li><a href="#"><img src="img/logos_manufacturers/Hitachi.png" width="169" height="31" alt="Логотип Hitachi"></a></li>
               <li><a href="#"><img src="img/logos_manufacturers/LG.png" width="121" height="73" alt="Логотип LG"></a></li>
               <li><a href="#"><img src="img/logos_manufacturers/AEG.png" width="151" height="96" alt="Логотип AEG"></a></li>
@@ -171,7 +171,7 @@
               </ul>
               <a href="#">Подробнее о компании</a>
             </section>
-            <section class="contacts">
+            <section class="adress">
               <h2>Контакты</h2>
               <p>Вы можете забрать товар сами, заехав в наш офис:</p>
               <img src="img/map_mini.png" width="300" height="158" alt=""><!--Здесь будет карта-->
@@ -179,12 +179,12 @@
             </section>
           </div>
         </main>
-        <footer>
-          <section>
+        <footer class="main-footer">
+          <section class="contacts">
             <h2 class="visually-hidden">Наши контакты</h2>
             <p>Техномарт</p>
             <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П<br>
-            +7 800 555-86-28</p>
+            <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a></p>
           </section>
           <section>
             <ul class="footer-navigation">
@@ -201,43 +201,45 @@
               <li><a href="#">Спецпредложения</a></li>
             </ul>
           </section>
-          <section>
+          <section class="socials">
             <p>2010-2021 Компания "Техномарт"
             Все права Защищены</p>
-            <ul class="socials">
-              <li><a href="#">Вконтакте</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
+            <ul class="socials-list">
+              <li><a class="social-button" href="#">Вконтакте</a></li>
+              <li><a class="social-button" href="#">Facebook</a></li>
+              <li><a class="social-button" href="#">Instagram</a></li>
             </ul>
-            <p>Обратная связь: mail@htmlacademy.ru</p>
-            <p>Разработано - htmlacademy.ru</p>
+          </section>
+          <section class="footer-copyright">
+            <p>Обратная связь: <a href="email:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+            <p>Разработано - <a href="https://htmlacademy.ru">htmlacademy.ru</a></p>
           </section>
         </footer>
-        <section class="login-form">
+        <!-- <section class="modal-login-form">
           <h2>Личный кабинет</h2>
-          <p>Введите, пожалуйста, свой логин и пароль</p>
+          <p class="modal-description">Введите, пожалуйста, свой логин и пароль</p>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p>
               <label for="login-login">Логин</label>
-              <input type="email" id="login-login" name="login" placeholder="email@example.ru">
+              <input class="login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.ru">
             </p>
             <p>
               <label for="login-password">Пароль</label>
-              <input type="password" id="login-password" name="password" placeholder="*********">
+              <input class="login-icon-password" type="password" id="login-password" name="password" placeholder="*********">
             </p>
             <p>
               <label>
-                <input type="checkbox" name="remember">
+                <input  class="login-help" type="checkbox" name="remember">
                 Запомните меня
               </label>
-              <a href="#">Я забыл пароль!</a>
+              <a class="restore" href="#">Я забыл пароль!</a>
             </p>
             <button type="submit">Войти</button>
           </form>
           <button type="button">Закрыть</button>
-        </section>
-        <section class="astray-popup">
-          <h2>Заблудились? Напишите нам!</h2>
+        </section> -->
+        <section class="modal-astray">
+          <p class="astray-description">Заблудились? Напишите нам!</p>
           <form action="https://echo.htmlacademy.ru" method="post">
             <p>
               <label for="astray-name">Ваше имя:</label>
@@ -245,22 +247,22 @@
             </p>
             <p>
               <label for="astray-email">Ваш e-mail:</label>
-              <input type="email" name="astray-email" id="mastrayap-email" placeholder="email@example.ru">
+              <input type="email" name="astray-email" id="astray-email" placeholder="email@example.ru">
             </p>
             <p>
               <label for="astray-text">Текст письма:</label>
               <textarea name="astray-text" id="astray-text" rows="6" cols="30">В свободной форме</textarea>
             </p>
             <div>
-              <button type="submit">Отправить</button>
+              <button class="button astray-button" type="submit">Отправить</button>
             </div>
           </form>
-          <button type="button" name="astray-close">Закрыть</button>
+          <button class="modal-close modal-astray" type="button" name="astray-close">Закрыть</button>
         </section>
         <section class="map-popup">
           <div>
             <img src="https://via.placeholder.com/943x449" alt="Наше местонахождение: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П">
-            <button type="button">Закрыть</button>
+            <button class="modal-close modal-map" type="button">Закрыть</button>
           </div>
         </section>
     </body>
