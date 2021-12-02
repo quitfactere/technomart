@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
-  url("../fonts/web/cuprum.woff2") format("woff2");
+      url("../fonts/web/cuprum.woff2") format("woff2"),
+      url("../fonts/web/cuprum.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9,7 +10,8 @@
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
-  url("../fonts/web/cuprum.woff2") format("woff2");
+      url("../fonts/web/cuprum.woff2") format("woff2"),
+      url("../fonts/web/cuprum.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
@@ -17,7 +19,8 @@
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
-  url("../fonts/web/cuprum.woff2") format("woff2");
+      url("../fonts/web/cuprum.woff2") format("woff2"),
+      url("../fonts/web/cuprum.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -25,7 +28,8 @@
 @font-face {
   font-family: "PT Sans";
   src: local("PT Sans"),
-  url("../fonts/web/ptsans.woff2") format("woff2");
+      url("../fonts/web/ptsans.woff2") format("woff2"),
+      url("../fonts/web/cuprum.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -33,22 +37,23 @@
 @font-face {
   font-family: "PT Sans";
   src: local("PT Sans"),
-  url("../fonts/web/ptsans.woff2") format("woff2");
+      url("../fonts/web/ptsans.woff2") format("woff2"),
+      url("../fonts/web/cuprum.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
-body, 
-header,
-h1,
-h2,
-h3,
-nav,
-div,
-ul,
-li,
-a,
-p {
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark: #293449;
+  --basic-dark: #32425C;
+  --basic-neutral: #F1F5F7;
+  --basic-red: #EE3643;
+  --
+  --basic-white: #ffffff;
+}
+
+body {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-style: normal;
