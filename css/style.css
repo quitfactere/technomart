@@ -44,17 +44,41 @@
 }
 
 :root {
-  --basic-black: #000000;
-  --basic-extra-dark: #293449;
-  --basic-dark: #32425C;
-  --basic-neutral: #F1F5F7;
-  --basic-red: #EE3643;
-  --
-  --basic-white: #ffffff;
+  --black-basic: #000000;
+  --dark-mirage: #161D29;
+  --dark-pickled-bluewood: #293449;
+  --dark-basic: #32425C;
+  --basic-green: #63A63E;
+  --green-apple: #5FBB2D;
+  --green-click: #518534;
+  --yellow-orange: #FFBF47;
+  --grandis: #FFD180;
+  --red-basic: #EE3643;
+  --red-brick: #CA2C37;
+  --red-tall-poppy: #BA2732;
+  --grey-nobel: #B5B5B5;
+  --greylight: #C5C5C5;
+  --mercury: #E5E5E5;
+  --neutral-basic: #F1F5F7;
+  --white-basic: #ffffff;
 }
 
 body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  color: var(--black-basic);
+  background-color: var(--white-basic);
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
