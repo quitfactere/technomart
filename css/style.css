@@ -66,7 +66,7 @@
 /* Общие стили */
 
 body {
-  min-width: 960px;
+  max-width: 960px;
   margin: 0;
   padding: 0;
   color: var(--black-basic);
@@ -99,12 +99,44 @@ img {
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
+.logo-container:active {
+  background-color: var(--red-tall-poppy);
+}
+
 .header-user-menu {
   list-style: none;  
+}
+
+.header-user-menu li:active {
+  background-color: var(--dark-mirage);  
+}
+
+.header-user-menu li:last-child {
+  background-color: var(--basic-green);
+}
+
+.header-user-menu li:last-child:hover {
+  background-color: var(--green-apple);
+}
+
+.header-user-menu li:last-child:active {
+  background-color: var(--basic-green);
+}
+
+.user-menu-item:active a {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .header-user-menu a {
   font-size: 18px;
   line-height: 24px;
   color: var(--white-basic);
+}
+
+.main-header input {
+  background-color: transparent;
+}
+
+.main-header input:focus {
+  background-color: var(--white-basic);
 }
