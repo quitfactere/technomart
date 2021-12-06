@@ -63,6 +63,8 @@
   --white-basic: #ffffff;
 }
 
+/* Общие стили */
+
 body {
   min-width: 960px;
   margin: 0;
@@ -81,4 +83,28 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Заголовок страницы */
+
+.main-header section {
+  width: 100%;
+  background-color: var(--dark-pickled-bluewood);
+}
+
+.logo-container {
+  width: 220px;
+  height: 47px;
+  background-color: var(--red-basic);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.header-user-menu {
+  list-style: none;  
+}
+
+.header-user-menu a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white-basic);
 }
