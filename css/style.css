@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
-      url("../fonts/web/cuprum.woff2") format("woff2"),
-      url("../fonts/web/cuprum.woff") format("woff");
+      url("../fonts/web/Cuprum-Regular.woff2") format("woff2"),
+      url("../fonts/web/Cuprum-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
-      url("../fonts/web/cuprum.woff2") format("woff2"),
-      url("../fonts/web/cuprum.woff") format("woff");
+      url("../fonts/web/Cuprum-Italic.woff2") format("woff2"),
+      url("../fonts/web/Cuprum-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
@@ -19,8 +19,8 @@
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
-      url("../fonts/web/cuprum.woff2") format("woff2"),
-      url("../fonts/web/cuprum.woff") format("woff");
+      url("../fonts/web/Cuprum-Bold.woff2") format("woff2"),
+      url("../fonts/web/Cuprum-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -28,8 +28,8 @@
 @font-face {
   font-family: "PT Sans";
   src: local("PT Sans"),
-      url("../fonts/web/ptsans.woff2") format("woff2"),
-      url("../fonts/web/cuprum.woff") format("woff");
+      url("../fonts/web/PTSans-Regular.woff2") format("woff2"),
+      url("../fonts/web/PTSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -37,8 +37,8 @@
 @font-face {
   font-family: "PT Sans";
   src: local("PT Sans"),
-      url("../fonts/web/ptsans.woff2") format("woff2"),
-      url("../fonts/web/cuprum.woff") format("woff");
+      url("../fonts/web/PTSans-Bold.woff2") format("woff2"),
+      url("../fonts/web/PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -87,6 +87,12 @@ img {
 
 /* Заголовок страницы */
 
+.main-header {
+  background-color: var(--neutral-basic);
+}
+
+/* Логотип */
+
 .main-header section {
   width: 100%;
   background-color: var(--dark-pickled-bluewood);
@@ -103,8 +109,25 @@ img {
   background-color: var(--red-tall-poppy);
 }
 
+/* Кнопки пользовательского меню */
+
 .header-user-menu {
   list-style: none;  
+}
+
+.main-header input {
+  color: var(--white-basic);
+  background-color: transparent;
+}
+
+.main-header input::-moz-placeholder {
+  color: var(--white-basic);
+  opacity: 1;
+}
+
+.main-header input:focus {
+  color: var(--black-basic);
+  background-color: var(--white-basic);
 }
 
 .header-user-menu li:active {
@@ -133,10 +156,28 @@ img {
   color: var(--white-basic);
 }
 
-.main-header input {
-  background-color: transparent;
+.header-description {
+  width: 197px;
+  height: 71px;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--red-basic);
 }
 
-.main-header input:focus {
-  background-color: var(--white-basic);
+.header-contacts {
+  color: var(--dark-basic);
+  font-size: 14px;
 }
+
+.header-contacts a {
+  width: 270px;
+  height: 45px;
+  color: var(--red-basic);
+  font-weight: bold;
+  font-size: 21px;
+  background-color: #f3f7f9;
+  border: 3px solid var(--white-basic);
+  box-sizing: border-box;
+}
+
