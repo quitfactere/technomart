@@ -61,12 +61,13 @@
   --mercury: #E5E5E5;
   --neutral-basic: #F1F5F7;
   --white-basic: #ffffff;
+  --white-opacity_0_3: rgba(255, 255, 255, 0.3);
 }
 
 /* Общие стили */
 
 body {
-  max-width: 960px;
+  max-width: 940px;
   margin: 0;
   padding: 0;
   color: var(--black-basic);
@@ -77,6 +78,7 @@ body {
 }
 
 a {
+  color: var(--white-basic);
   text-decoration: none;
 }
 
@@ -159,9 +161,9 @@ img {
 .header-description {
   width: 197px;
   height: 71px;
-  font-style: italic;
   font-size: 16px;
   line-height: 23px;
+  font-style: italic;
   color: var(--red-basic);
 }
 
@@ -181,3 +183,71 @@ img {
   box-sizing: border-box;
 }
 
+.authorization-buttons {
+  list-style: none;
+}
+
+.authorization-buttons li:first-child {
+  width: 121px;
+  height: 45px;
+  background-color: var(--white-basic);
+  box-sizing: border-box;
+}
+
+.authorization-buttons li:last-child {
+  width: 150px;
+  height: 45px;
+  background-color: var(--white-basic);
+  box-sizing: border-box;
+}
+
+.authorization-buttons a {
+  color: var(--black-basic);
+  font-size: 21px;
+}
+
+/* Главная навигация */
+
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 940px;
+  height: 60px;
+  list-style: none;
+  background-color: var(--dark-basic);
+  box-sizing: border-box;
+}
+
+.site-navigation a {
+  color: var(--white-basic);
+}
+
+/* Промо-блок */
+
+.materials {
+  width: 300px;
+  height: 123px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-basic);
+  background-color: var(--yellow-orange);
+}
+
+.materials a {
+  display: block;
+  width: 135px;
+  height: 38px;
+  background-color: var(--white-opacity_0_3);
+}
+
+.materials p {
+  font-size: 14px;
+  color: var(--white-basic);
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.card-goods-new {
+  background-color: var(--red-basic);
+}
