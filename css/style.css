@@ -48,14 +48,17 @@
   --dark-mirage: #161D29;
   --dark-pickled-bluewood: #293449;
   --dark-basic: #32425C;
+  --piction-blue: #3BBCE3;
   --basic-green: #63A63E;
   --green-apple: #5FBB2D;
   --green-click: #518534;
+  --feijoa: #8ED78F;
   --yellow-orange: #FFBF47;
   --grandis: #FFD180;
   --red-basic: #EE3643;
   --red-brick: #CA2C37;
   --red-tall-poppy: #BA2732;
+  --light-orchid: #DC91D8;
   --grey-nobel: #B5B5B5;
   --greylight: #C5C5C5;
   --mercury: #E5E5E5;
@@ -78,7 +81,6 @@ body {
 }
 
 a {
-  color: var(--white-basic);
   text-decoration: none;
 }
 
@@ -183,28 +185,29 @@ img {
   box-sizing: border-box;
 }
 
-.authorization-buttons {
-  list-style: none;
-}
-
-.authorization-buttons li:first-child {
+.authorization-buttons button:first-child {
   width: 121px;
   height: 45px;
   background-color: var(--white-basic);
+  box-shadow: 0 0 0 0 0;
   box-sizing: border-box;
 }
 
-.authorization-buttons li:last-child {
+.authorization-buttons button:last-child {
   width: 150px;
   height: 45px;
   background-color: var(--white-basic);
   box-sizing: border-box;
 }
 
-.authorization-buttons a {
+.authorization-buttons button {
   color: var(--black-basic);
   font-size: 21px;
 }
+
+.authorization-buttons li:hover {
+  color: var(--red-basic);
+
 
 /* Главная навигация */
 
@@ -227,21 +230,20 @@ img {
 
 .materials {
   width: 300px;
-  height: 123px;
+  /*height: 123px;*/
   font-size: 24px;
   font-weight: bold;
   color: var(--white-basic);
   background-color: var(--yellow-orange);
 }
 
-.materials a {
-  display: block;
+.materials div {
   width: 135px;
   height: 38px;
   background-color: var(--white-opacity_0_3);
 }
 
-.materials p {
+.materials a {
   font-size: 14px;
   color: var(--white-basic);
   text-transform: uppercase;
@@ -250,4 +252,108 @@ img {
 
 .card-goods-new {
   background-color: var(--red-basic);
+}
+
+.tools {
+  width: 300px;
+  /*height: 123px;*/
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-basic);
+  background-color: var(--piction-blue);
+}
+
+.tools div {
+  width: 135px;
+  height: 38px;
+  background-color: var(--white-opacity_0_3);
+}
+
+.tools a {
+  font-size: 14px;
+  color: var(--white-basic);
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.machinery {
+  width: 300px;
+  /*height: 123px;*/
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-basic);
+  background-color: var(--light-orchid);
+}
+
+.machinery div {
+  width: 135px;
+  height: 38px;
+  background-color: var(--white-opacity_0_3);
+}
+
+.machinery a {
+  font-size: 14px;
+  color: var(--white-basic);
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.discount {
+  width: 300px;
+  /*height: 123px;*/
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-basic);
+  background-color: var(--feijoa);
+}
+
+.discount div {
+  width: 135px;
+  height: 38px;
+  background-color: var(--white-opacity_0_3);
+}
+
+.discount a {
+  font-size: 14px;
+  color: var(--white-basic);
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.delivery {
+  width: 300px;
+  /*height: 123px;*/
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-basic);
+  background-color: var(--yellow-orange);
+}
+
+.delivery div {
+  width: 135px;
+  height: 38px;
+  background-color: var(--white-opacity_0_3);
+}
+
+.delivery a {
+  font-size: 14px;
+  color: var(--white-basic);
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+/* Промо-слайдер */
+
+.promo-slider {
+  /*color: var(--white-basic);*/
+}
+
+.slider-perfs h3,
+.slider-drill h3 {
+  font-size: 36px;
+}
+
+.slider-perfs p,
+.slider-drill p {
+  font-size: 18px;
 }
