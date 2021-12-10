@@ -466,6 +466,7 @@ img {
 
 .popular-goods {
   width: 940px;
+  background-color: var(--white-basic);
 }
 
 .popular-goods div {
@@ -517,4 +518,78 @@ img {
   font-size: 17px;
   color: var(--white-basic);
   background-color: var(--red-basic);
+}
+
+/* Популярные производители */
+
+.popular-manufacturers {
+  width: 940px;
+  background-color: var(--white-basic);
+}
+
+.popular-manufacturers div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular-manufacturers div {
+  background-color: var(--merino);
+}
+
+.popular-manufacturers h2 {
+  color: var(--dark-basic);
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.popular-manufacturers-button {
+  display: block;
+  width: 192px;
+  height: 38px;
+  color: var(--white-basic);
+  background-color: var(--red-basic);
+}
+
+.manufacturers-list {
+  list-style: none;
+}
+
+/* Сервисы */
+
+.services {
+
+}
+
+.services h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.services p {
+  width: 410px;
+  font-family: "PTSans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services-slider {
+  list-style: none;
+}
+
+.services-slider li {
+  width: 240px;
+  height: 61px;
+  color: var(--white-basic);
+  background-color: var(--dark-basic);
+}
+
+.services-slider li:first-child {
+  color: var(--dark-basic);
+  background-color: var(--white-basic);
+}
+
+.services-delivery p {
+  width: 300px;
+  height: 99px;
 }
