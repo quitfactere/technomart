@@ -566,6 +566,12 @@ img {
   text-transform: uppercase;
 }
 
+.services h3 {
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 .services p {
   width: 410px;
   font-family: "PTSans", "Arial", sans-serif;
@@ -592,4 +598,12 @@ img {
 .services-delivery p {
   width: 300px;
   height: 99px;
+}
+
+.credit-button {
+  display: block;
+  width: 192px;
+  height: 38px;
+  color: var(--white-basic);
+  background-color: var(--red-basic);
 }
