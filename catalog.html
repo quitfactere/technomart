@@ -13,14 +13,14 @@
 
 <body class="page-body">
   <header class="main-header">
-    <section>
+    <section class="header-user-menu">
       <div class="wrapper">
         <a class="logo-container" href="index.html"><img src="img/logo-technomart.svg" width="108" height="18"
             alt="Логотип магазина строительного инструмента"></a>
         <input type="text" name="search" placeholder="Поиск:">
-        <ul class="header-user-menu">
+        <ul class="user-menu">
           <li class="user-menu-item"><a href="#">Закладки: 0</a></li>
-          <li class="user-menu-item"><a href="#">Корзина: 10</a></li>
+          <li class="user-menu-item catalog-cart"><a href="#">Корзина: 10</a></li>
           <li class="user-menu-item"><a href="#">Оформить заказ</a></li>
         </ul>
       </div>
@@ -72,6 +72,26 @@
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
       <h2>Перфораторы</h2>
+      <div class="sorting">
+        <p>Сортировка:</p>
+        <ul class="sorting-list">
+          <li class="sorting-list-item"><a href="#">По цене</a></li>
+          <li class="sorting-list-item"><a href="#">По типу</a></li>
+          <li class="sorting-list-item"><a href="#">По функционалу</a></li>
+        </ul>
+        <div class="sort-arrow-container">
+          <a class="sort-arrow-up" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 0L11 10L0 10" />
+            </svg>
+          </a>
+          <a class="sort-arrow-down" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 10L0 0H11" />
+            </svg>
+          </a>
+        </div>
+      </div>
       <p class="filter-head">Фильтр:</p>
       <section class="catalog_filter">
         <form action="https://echo.htmlacademy.ru/" method="get" oninput="max_cost_output.value=cost.value">
@@ -103,26 +123,6 @@
           <button type="submit">Показать</button>
         </form>
       </section>
-      <div class="sorting">
-        <p>Сортировка:</p>
-        <ul class="sorting-list">
-          <li class="sorting-list-item"><a href="#">По цене</a></li>
-          <li class="sorting-list-item"><a href="#">По типу</a></li>
-          <li class="sorting-list-item"><a href="#">По функционалу</a></li>
-        </ul>
-        <div class="sort-arrow-container">
-          <a class="sort-arrow-up" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 0L11 10L0 10" />
-            </svg>
-          </a>
-          <a class="sort-arrow-down" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 10L0 0H11" />
-            </svg>
-          </a>
-        </div>
-      </div>
       <section class="goods-list">
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="catalog-goods">
