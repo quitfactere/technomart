@@ -72,40 +72,22 @@
         <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
       <h2>Перфораторы</h2>
-      <div class="sorting">
-        <p>Сортировка:</p>
-        <ul class="sorting-list">
-          <li class="sorting-list-item"><a href="#">По цене</a></li>
-          <li class="sorting-list-item"><a href="#">По типу</a></li>
-          <li class="sorting-list-item"><a href="#">По функционалу</a></li>
-        </ul>
-        <div class="sort-arrow-container">
-          <a class="sort-arrow-up" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 0L11 10L0 10" />
-            </svg>
-          </a>
-          <a class="sort-arrow-down" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M5.5 10L0 0H11" />
-            </svg>
-          </a>
-        </div>
-      </div>
-      <p class="filter-head">Фильтр:</p>
       <section class="catalog_filter">
-        <form action="https://echo.htmlacademy.ru/" method="get" oninput="max_cost_output.value=cost.value">
+        <h3 class="filter-head">Фильтр:</h3>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get" oninput="max_cost_output.value=cost.value">
           <fieldset class="price">
             <legend>Цена:</legend>
-            <input type="range" name="cost" id="cost" min="0" max="30000" step="1">
+            <div class="range-container">
+              <input type="range" name="cost" id="cost" min="0" max="30000" step="1">
+            </div>
             <label class="visually-hidden" for="min_cost_output">От</label><input class="min_cost_output" type="text"
               name="min_cost_output" id="min_cost_output" value="0">
             <label class="visually-hidden" for="max_cost_output">До</label><input class="max_cost_output" type="text"
               name="max_cost_output" id="max_cost_output" value="30000">
           </fieldset>
-          <fieldset class="catalog-manufacterers">
+          <fieldset class="filter-manufacterers">
             <legend>Производители:</legend>
-            <ul>
+            <ul  class="filter-manufacterers-list">
               <li><label><input type="checkbox" name="manufacturer" checked value="Bosch">Bosch</label></li>
               <li><label><input type="checkbox" name="manufacturer" value="Interskol">Интерскол</label></li>
               <li><label><input type="checkbox" name="manufacturer" checked value="Makita">Makita</label></li>
@@ -123,9 +105,29 @@
           <button type="submit">Показать</button>
         </form>
       </section>
-      <section class="goods-list">
+      <section class="catalog-goods">
+        <div class="sorting">
+          <p>Сортировка:</p>
+          <ul class="sorting-list">
+            <li class="sorting-list-item"><a href="#">По цене</a></li>
+            <li class="sorting-list-item"><a href="#">По типу</a></li>
+            <li class="sorting-list-item"><a href="#">По функционалу</a></li>
+          </ul>
+          <div class="sort-arrow-container">
+            <a class="sort-arrow-up" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 0L11 10L0 10" />
+              </svg>
+            </a>
+            <a class="sort-arrow-down" href="#"><svg width="11" height="10" viewBox="0 0 11 10"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 10L0 0H11" />
+              </svg>
+            </a>
+          </div>
+        </div>
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="catalog-goods">
+        <ul class="catalog-list">
           <li class="catalog-item">
             <img src="img/goods/BFG_6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
             <button class="buy" type="button">Купить</button>
