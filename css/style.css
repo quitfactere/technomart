@@ -724,7 +724,7 @@ img {
   text-transform: uppercase;
 }
 
-.services p:not(:last-child) {
+.services-description {
   grid-row: 2 / 3;
   width: 410px;
   margin-bottom: 70px;
@@ -733,9 +733,10 @@ img {
   line-height: 24px;
 }
 
-.services-delivery {
+.services-container {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 70px;
 }
 
 .services-slider {
@@ -771,27 +772,53 @@ img {
   background-color: var(--white-basic);
 }
 
-.services h3 {
+.services-delivery {
+  flex-grow: 2;
+  background: url("../img/services/delivery.png") no-repeat right top;
+}
+
+.services-guarantee {
+  flex-grow: 2;
+  background: url("../img/services/guarantee.png") no-repeat right top;
+}
+
+.services-credit {
+  flex-grow: 2;
+  background: url("../img/services/credit.png") no-repeat right top;
+}
+
+.services-delivery h3,
+.services-guarantee h3,
+.services-credit h3 {
   margin-top: 0;
   font-size: 30px;
   font-weight: normal;
   text-transform: uppercase;
 }
 
-.services-delivery p {
-  width: 300px;
+.services-delivery p,
+.services-guarantee p,
+.services-credit p {
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
 
-.services-delivery img {
-  margin-left: -140px;
+.services-delivery img,
+.services-guarantee img,
+.services-credit img {
 }
 
-.services-guarantee,                  /*====================== Временно отключены два блока Сервисов */
-.services-credit {
+.services-delivery {
   display: none;
+}
+.services-guarantee {
+  display: none;
+}    
+.services-credit {
+
+}             /*====================== Временно отключены два блока Сервисов */
+.services-credit {
 }
 
 .credit-button {
