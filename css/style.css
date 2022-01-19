@@ -787,10 +787,18 @@ img {
   background: url("../img/services/credit.png") no-repeat right top;
 }
 
+.services-delivery,
+.services-guarantee,
+.services-credit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .services-delivery h3,
 .services-guarantee h3,
 .services-credit h3 {
-  margin-top: 0;
+  margin: 0;
   font-size: 30px;
   font-weight: normal;
   text-transform: uppercase;
