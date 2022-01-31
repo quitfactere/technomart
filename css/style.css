@@ -183,27 +183,65 @@ img {
   list-style: none;
 }
 
-.main-header input {
+.header-user-menu input {
+  position: relative;
   width: 271px;
   height: 42px;
+  padding-left: 42px;
+  font-size: 18px;
   color: var(--white-basic);
   background-color: transparent;
   border: none;
+  box-sizing: border-box;
 }
 
-.main-header input::-moz-placeholder { /* Белый текст в placeholder для Firefox */
+.header-user-menu input::-moz-placeholder { /* Белый текст в placeholder для Firefox */
   color: var(--white-basic);
   opacity: 1;
 }
 
-.main-header input:focus {
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  background-size: 17px 17px;
+  background-position: 0 0;
+  background-image: url("../img/icons_header/icon-search.svg");
+  opacity: 0.3;
+}
+
+
+.header-user-menu input:focus {
   color: var(--black-basic);
   background-color: var(--white-basic);
 }
 
 .user-menu-item {
+  position: relative; /* Все элементы пользовательского меню, крайнему не нужно */
   width: 150px;
   height: 42px;
+  padding: 9px 24px 9px 0px;
+  box-sizing: border-box;
+}
+
+.header-bookmarks {
+  padding-left: 43px;
+}
+
+.header-cart {
+  padding-left: 49px;
+}
+
+.user-menu-item a {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white-basic);
 }
 
 .catalog-cart {
@@ -215,6 +253,7 @@ img {
 }
 
 .user-menu-item:last-child {
+  padding: 9px 16px 19px;
   background-color: var(--green-basic);
 }
 
@@ -230,10 +269,32 @@ img {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.user-menu-item a {
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--white-basic);
+.header-bookmarks::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left:20px;
+  width: 17px;
+  height: 17px;
+  background-size: 17px 17px;
+  background-position: 0 0;
+  background-image: url("../img/icons_header/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.header-cart::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left:26px;
+  width: 17px;
+  height: 17px;
+  background-size: 17px 17px;
+  background-position: 0 0;
+  background-image: url("../img/icons_header/icon-cart.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
 .header-about-us {
@@ -334,7 +395,7 @@ img {
   text-align: center;
 }
 
-.site-navigation-link {
+.site-navigation a {
   display: block;
   height: 100%;
   padding: 20px 0 20px 0;
@@ -342,16 +403,16 @@ img {
   box-sizing: border-box;
 }
 
-.site-navigation-link:hover {
+.site-navigation a:hover {
   background-color: var(--dark-pickled-bluewood);
 }
 
-.site-navigation-link:active {
+.site-navigation a:active {
   color: var(--white-opacity-0-5);
   background-color: var(--mirage);
 }
 
-.site-navigation-link:active {
+.site-navigation a:active {
   opacity: 0.5;
 }
 
