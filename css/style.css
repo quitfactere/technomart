@@ -204,22 +204,27 @@ img {
   position: relative;
 }
 
+.header-user-menu input:focus {
+  color: var(--black-basic);
+  background-color: var(--white-basic);
+  outline: 0;
+}
+
 .search-icon {
   position: absolute;
   top: 12px;
   left: 17px;
-  width: 17px;
-  height: 17px;
-  background-size: 17px 17px;
-  background-position: 0 0;
-  background-image: url("../img/icons_header/icon-search.svg");
-  opacity: 0.3;
 }
 
+.search-container:hover path {
+  fill-opacity: 1;
+}
 
-.header-user-menu input:focus {
-  color: var(--black-basic);
-  background-color: var(--white-basic);
+.search-container:focus input {
+  background-color: var(--red-basic);
+}
+
+.user-menu {
 }
 
 .user-menu-item {
@@ -230,11 +235,11 @@ img {
   box-sizing: border-box;
 }
 
-.header-bookmarks {
+.user-menu-item:first-child {
   padding-left: 43px;
 }
 
-.header-cart {
+.user-menu-item:nth-child(2) {
   padding-left: 49px;
 }
 
@@ -269,37 +274,14 @@ img {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.header-bookmarks::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left:20px;
-  width: 17px;
-  height: 17px;
-  background-size: 17px 17px;
-  background-position: 0 0;
-  background-image: url("../img/icons_header/icon-bookmark.svg");
-  background-repeat: no-repeat;
-  opacity: 0.3;
-}
-
-.header-cart::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left:26px;
-  width: 17px;
-  height: 17px;
-  background-size: 17px 17px;
-  background-position: 0 0;
-  background-image: url("../img/icons_header/icon-cart.svg");
-  background-repeat: no-repeat;
-  opacity: 0.3;
+.header-bookmarks:hover::before,
+.header-cart:hover::before {
+  opacity: 1;
 }
 
 .header-about-us {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
   column-gap: 50px;
   height: 158px;
 }
@@ -317,6 +299,7 @@ img {
 
 .header-contacts {
   margin-top: 46px;
+  text-align: center;
   color: var(--dark-basic);
   font-size: 14px;
 }
@@ -325,6 +308,8 @@ img {
   display: block;
   width: 270px;
   height: 45px;
+  margin-bottom: 3px;
+  padding-top: 7px;
   text-align: center;
   color: var(--red-basic);
   font-weight: bold;
@@ -336,28 +321,46 @@ img {
 
 .authorization-buttons {
   display: flex;
-  width: 281px;
   justify-content: space-between;
+  width: 281px;
   margin-top: 46px;
   list-style: none;
 }
 
+.authorization-buttons li {
+padding: 10px 24px;
+}
+
 .authorization-buttons a {
-  text-align: center;
   color: var(--black-basic);
   font-size: 21px;
 }
 
 .authorization-buttons .login-button {
+  position: relative;
   width: 121px;
   height: 45px;
+  padding-left: 45px;
   background-color: var(--white-basic);
+  box-sizing: border-box;
+}
+
+.authorization-buttons .login-button::before {
+  position: absolute;
+  top: 14px;
+  left: 19px;
+  width: 20px;
+  height: 17px;
+  background-size: 17px 17px;
+  background-position: 0 0;
+  background-image: url("../img/icons_header/icon-login.svg");
 }
 
 .authorization-buttons .registration-button {
   width: 150px;
   height: 45px;
   background-color: var(--white-basic);
+  box-sizing: border-box;
 }
 
 .login-button:hover a,
