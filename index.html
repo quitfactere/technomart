@@ -47,7 +47,13 @@
         <p class="header-contacts"><a href="tel:+78005558628">+7 800 555-86-28</a>
           г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
         <ul class="authorization-buttons">
-          <li class="login-button"><a href="#">Войти</a></li>
+          <li>
+            <a class="login-button" href="#">Войти
+              <svg class="login-icon" width="20" height="17" viewBox="0 0 20 17" fill="#C5C5C5" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+                <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
+              </svg>
+            </a></li>
           <li class="registration-button"><a href="#">Регистрация</a></li>
         </ul>
       </div>
@@ -72,50 +78,68 @@
       <section class="promo">
         <h2 class="visually-hidden">Промо блок</h2>
         <div class="materials">
-          <h3>Материалы</h3>
-          <p class="card-goods-new">New</p>
-          <a href="#" class="promo-button">На любой вкус</a>
+          <div>
+            <h3>Материалы</h3>
+            <p class="card-goods-new">New</p>
+            <a href="#" class="promo-button">На любой вкус</a>
+          </div>
           <img src="img/promo/materials.svg" width="44" height="65" alt="Материалы для ремонта">
         </div>
         <div class="tools">
-          <h3>Инструмент</h3>
-          <a href="#" class="promo-button">На все случаи</a>
+          <div>
+            <h3>Инструмент</h3>
+            <a href="#" class="promo-button">На все случаи</a>
+          </div>
           <img src="img/promo/tools.svg" width="75" height="61" alt="Инструмент для ремонта">
         </div>
         <div class="machinery">
-          <h3>Техника</h3>
-          <a href="#" class="promo-button">Для стройки</a>
+          <div>
+            <h3>Техника</h3>
+            <a href="#" class="promo-button">Для стройки</a>
+          </div>
           <img src="img/promo/machinery.svg" width="78" height="62" alt="Для стройки">
         </div>
         <div class="discount">
-          <h3>Скидки 50%</h3>
-          <a href="#" class="promo-button">На 350 товаров</a>
+          <div>
+            <h3>Скидки 50%</h3>
+            <a href="#" class="promo-button">На 350 товаров</a>
+          </div>
           <img src="img/promo/discount.svg" width="59" height="72" alt="Скидки на 350 товаров">
         </div>
         <div class="delivery">
-          <h3>Доставка</h3>
-          <a href="#" class="promo-button">Бесплатно</a>
+          <div>
+            <h3>Доставка</h3>
+            <a href="#" class="promo-button">Бесплатно</a>
+          </div>
           <img src="img/promo/delivery.svg" width="78" height="63" alt="Доставка бесплатно">
         </div>
-        <div class="promo-slider">
-          <div class="slider-perfs">
-            <h3>Перфораторы</h3>
-            <p>Настоящие мужские игрушки</p>
-            <img src="img/promo/slider_perfs.jpg" width="620" height="266" alt="Рабочий с перфоратором">
-          </div>
-          <div class="slider-drill">
-            <h3>Дрели</h3>
-            <p>Соседям на радость</p>
-            <img src="img/promo/slider_drill.jpg" width="620" height="266" alt="Рабочий с дрелью">
-          </div>
-          <div class="slider-button-open-cat">
-            <a href="catalog.html">Открыть каталог</a>
-          </div>
-          <button class="button-arrow-previous" type="button" name="previous-slide">Назад</button>
-          <button class="button-arrow-next" type="button" name="next-slide">Вперёд</button>
-          <button type="button">Слайд 1</button>
-          <button type="button">Слайд 2</button>
-        </div>
+        <section class="slider">
+          <ul class="slider-list">
+            <li class="slide slide-perfs">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+            </li>
+            <li class="slide slide-drill slide-current">
+              <h3>Дрели</h3>
+              <p>Соседям на радость</p>
+            </li>
+          </ul>
+            <div class="slider-controls">
+              <a class="slider-button-open-cat" href="catalog.html">Открыть каталог</a>
+              <!--<button type="button" name="previous-slide" aria-label="Предыдущий слайд"></button>-->
+              <svg class="button-arrow-previous" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9244 0.941467L21.9225 2.98927L4.90696 20.4361L21.978 37.9376L19.9789 39.9854L0.910614 20.4361L19.9244 0.941467Z" fill="white"/>
+              </svg>
+              <svg class="button-arrow-next" width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.07568 39.0585L0.0775054 37.0107L17.0931 19.5639L0.0220266 2.06243L2.02116 0.0146289L21.0894 19.5639L2.07568 39.0585Z" fill="white"/>
+                </svg>
+              <!--<button type="button" name="next-slide" aria-label="Следующий слайд"></button>-->
+              <ul>
+                <button type="button" aria-label="Первый слайд"></button>
+                <button class="current" type="button" aria-label="Второй слайд"></button>
+              </ul>
+            </div>
+        </section>
       </section>
       <section class="popular-goods">
         <div>
