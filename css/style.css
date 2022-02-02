@@ -569,29 +569,20 @@ img {
   font-size: 18px;
 }
 
-.slide-perfs {
-  display: none;
-  height: 266px;
-  color: var(--white-basic);
-  background-image: url("../img/promo/slider_perfs.jpg");
-  background-repeat: no-repeat;
-}
-
+.slide-perfs,
 .slide-drill {
   display: none;
   height: 266px;
   color: var(--white-basic);
-  background-image: url("../img/promo/slider_drill.jpg");
   background-repeat: no-repeat;
 }
 
-.slide-current {
-  display: block;
+.slide-perfs {
+  background-image: url("../img/slider/slider_perfs.jpg");
 }
 
-.slider-controls .current {
-  display: block;
-  background-color: var(--white-basic);
+.slide-drill {
+  background-image: url("../img/slider/slider_drill.jpg");
 }
 
 .slider-button-open-cat {
@@ -618,7 +609,11 @@ img {
   background-color: var(--red-tall-poppy);
 }
 
-.slider-controls ul {
+.slide-current {
+  display: block;
+}
+
+.slider-controls-radio {
   position: absolute;
   left: 50%;
   bottom: 36px;
@@ -627,14 +622,25 @@ img {
   width: 30px;
 }
 
-.slider-controls button {
+.slider-controls-radio input[type="radio"] {
+  display: none;
+}
+
+.slider-controls label {
   padding: 0;
   width: 10px;
   height: 10px;
-  background-color: var(--red-basic);rgba(0, 0, 0, 0.0001);
-  border: none;
+  background-color: var(--white-basic);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.slider-controls .current {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--red-basic);
+  border: 2px solid var(--white-basic);
 }
 
 .button-arrow-previous {
@@ -649,7 +655,8 @@ img {
   top: 122px;
   right: 24px;
   background-repeat: no-repeat;
-}
+} */
+
 /*=========================================================== Популярные товары ================================================*/
 /*====================================== Каталог, карточки товаров ========================*/
 
