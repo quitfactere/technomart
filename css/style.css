@@ -454,6 +454,7 @@ img {
 }
 
 .materials {
+  overflow: hidden;
   background-color: var(--yellow-orange);
 }
 
@@ -516,15 +517,19 @@ img {
 
 .card-goods-new {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -10px;
+  right: -30px;
   width: 100px;
   height: 30px;
+  padding-top: 8px;
   transform: rotate(45deg);
   overflow: hidden;
   font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
   color: var(--white-basic);
   background-color: var(--red-basic);
+  box-sizing: border-box;
 }
 
 .materials .promo-button:hover,
@@ -627,19 +632,19 @@ img {
 .slide-drill p,
 .slide-perfs p {
   position: absolute;
-  top: 64px;
+  top: 50px;
   left: 24px;
   color: white;
 }
 
 .slide-perfs h3,
 .slide-perfs p {
-  left: 620px;
+  left: 644px;
 }
 
 #first-slide:checked ~ .slider-controls label[for="first-slide"],
 #second-slide:checked ~ .slider-controls label[for="second-slide"] {
-  background-color: red;
+  background-color: var(--red-basic);
 }
 
 #first-slide:checked ~ .slider-inner .slider-slides {
@@ -650,13 +655,28 @@ img {
 }
 
 .slider-control-arrows svg:hover path {
-  fill: black;
+  fill: var(--black-basic);
 }
 
 .slider-control-arrows svg:active path {
-  fill: red;
+  fill: var(--red-tall-poppy);
 }
 
+.slider-catalog-button {
+  position: absolute;
+  left: 24px;
+  bottom: 27px;
+  display: block;
+  width: 192px;
+  height: 38px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--white-basic);
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: var(--red-basic);
+}
 
 /*=========================================================== Популярные товары ================================================*/
 /*====================================== Каталог, карточки товаров ========================*/
@@ -691,7 +711,6 @@ img {
   box-sizing: border-box;
   text-align: center;
   color: var(--white-basic);
-  color: var(--white-basic);
   font-size: 14px;
   text-transform: uppercase;
   background-color: var(--red-basic);
@@ -709,14 +728,19 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 220px;
   height: 318px;
+  overflow: hidden;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
   border: 1px solid var(--gallery);
+}
+
+.catalog-item p {
+  margin: 0;
 }
 
 .catalog-item del {
@@ -732,6 +756,7 @@ img {
   font-size: 17px;
   color: var(--white-basic);
   background-color: var(--red-basic);
+  background-image: linear-gradient(45deg, var(--red-basic) 75%, var(--white-basic) 75%);
 }
 
 .catalog-item:hover img {
