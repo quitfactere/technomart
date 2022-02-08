@@ -571,7 +571,7 @@ img {
   list-style: none;
 }
 
-.slider-slides img {
+.slider-slides li {
   float: left;
   width: 620px;
   height: 266px;
@@ -635,11 +635,6 @@ img {
   top: 50px;
   left: 24px;
   color: white;
-}
-
-.slide-perfs h3,
-.slide-perfs p {
-  left: 644px;
 }
 
 #first-slide:checked ~ .slider-controls label[for="first-slide"],
@@ -739,7 +734,15 @@ img {
   border: 1px solid var(--gallery);
 }
 
-.catalog-item p {
+.catalog-item div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 118px;
+  background-color: transparent;
+}
+
+.catalog-item p:not(.card-goods-new) {
   margin: 0;
 }
 
@@ -753,15 +756,19 @@ img {
   display: block;
   width: 141px;
   height: 38px;
+  padding-top: 10px;
   font-size: 17px;
   color: var(--white-basic);
   background-color: var(--red-basic);
-  background-image: linear-gradient(45deg, var(--red-basic) 75%, var(--white-basic) 75%);
+  background-image: linear-gradient(45deg, transparent 89%, var(--white-basic) 89%),
+                    linear-gradient(135deg, transparent 89%, var(--white-basic) 89%);
+  border-radius: 2px;
+  box-sizing: border-box;
 }
 
-.catalog-item:hover img {
+/*.catalog-item:hover img {
   display: none;
-}
+}*/
 
 .catalog-item:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -794,7 +801,7 @@ img {
   border: 3px solid var(--green-basic);
 }
 
-.catalog-item:hover .buy,
+/*.catalog-item:hover .buy,
 .catalog-item:hover .in-bookmarks {
   display: block;
 }
@@ -802,7 +809,7 @@ img {
 .catalog-item:hover .card-goods-new {
   display: none;
 }
-
+*/
 .buy:hover {
   background-color: var(--green-apple);
 }
@@ -892,7 +899,6 @@ img {
 /*================================================ Сервисы ============================================*/
 
 .services {
-  width: 100%;
   background-color: var(--neutral-basic);
 }
 
@@ -923,17 +929,20 @@ img {
 
 .services-container {
   display: flex;
-  justify-content: flex-start;
   margin-bottom: 70px;
+}
+
+.services-container input[type="radio"] {
+  display: none;
 }
 
 .services-slider {
   margin: 0;
-  margin-right: 70px;
+  margin-right: 80px;
   list-style: none;
 }
 
-.services-slider li {
+.services-slider label {
   display: flex;
   align-items: center;
   width: 240px;
@@ -945,44 +954,47 @@ img {
   box-sizing: border-box;
 }
 
-.services-slider li:first-child {
-  color: var(--dark-basic);
-  background-color: var(--white-basic);
-}
-
-.services-slider li:hover {
+.services-slider label:hover {
   color: var(--white-basic);
   background-color: var(--dark-pickled-bluewood);
 }
 
-.services-slider li:active {
+.services-slider label:active {
   color: var(--dark-basic);
   background-color: var(--white-basic);
 }
 
+.services-list {
+  width: 300%;
+  list-style: none;
+}
+
+.services-list li {
+  position: relative;
+  float: left;
+  display: block;
+  width: 620px;
+  height: 285px;
+}
+
+.services-list img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+/*
 .services-delivery {
-  flex-grow: 2;
   background: url("../img/services/delivery.png") no-repeat right top;
 }
 
 .services-guarantee {
-  flex-grow: 2;
   background: url("../img/services/guarantee.png") no-repeat right top;
 }
 
 .services-credit {
-  flex-grow: 2;
   background: url("../img/services/credit.png") no-repeat right top;
 }
-
-.services-delivery,
-.services-guarantee,
-.services-credit {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
+*/
 .services-delivery h3,
 .services-guarantee h3,
 .services-credit h3 {
@@ -1000,21 +1012,31 @@ img {
   line-height: 24px;
 }
 
-.services-delivery img,
-.services-guarantee img,
-.services-credit img {
+#btn-1:checked ~ .services-slider label[for="btn-1"] {
+  color: var(--dark-basic);
+  background-color: var(--white-basic);
 }
 
-.services-delivery {
-  display: none;
+#btn-2:checked ~ .services-slider label[for="btn-2"] {
+  color: var(--dark-basic);
+  background-color: var(--white-basic);
 }
-.services-guarantee {
-  display: none;
-}    
-.services-credit {
 
-}             /*====================== Временно отключены два блока Сервисов */
-.services-credit {
+#btn-3:checked ~ .services-slider label[for="btn-3"] {
+  color: var(--dark-basic);
+  background-color: var(--white-basic);
+}
+
+#btn-1:checked ~ .slider-inner .services-list {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .services-list {
+  transform: translate(-620px);
+}
+
+#btn-3:checked ~ .slider-inner .services-list {
+  transform: translate(-1240px);
 }
 
 .credit-button {
