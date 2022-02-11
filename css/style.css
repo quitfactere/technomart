@@ -237,7 +237,7 @@ img {
   padding-left: 43px;
 }
 
-.user-menu-item:nth-child(2) {
+.header-cart {
   padding-left: 49px;
 }
 
@@ -248,6 +248,7 @@ img {
 }
 
 .catalog-cart {
+  padding-left: 40px;
   background-color: var(--red-basic);
 }
 
@@ -265,6 +266,10 @@ img {
   position: absolute;
   top: 13px;
   left: 26px;
+}
+
+.catalog-cart-icon {
+  left: 18px;
 }
 
 .header-bookmarks:hover .bookmark-icon,
