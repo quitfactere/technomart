@@ -179,9 +179,11 @@
         </div>
         <ul class="popular-goods-list">
           <li class="catalog-item">
-            <img src="img/goods/BFG_9000.jpg" width="184" height="164" alt="Перфоратор Bosch BFG 9000">
-            <!-- <button class="buy" type="button">Купить</button>
-           <button class="in-bookmarks" type="button">В закладки</button>-->
+            <img class="bfg-9000" src="img/goods/BFG_9000.jpg" width="184" height="164" alt="Перфоратор Bosch BFG 9000">
+            <div class="catalog-item-buttons">  
+              <button class="buy" type="button">Купить</button>
+              <button class="in-bookmarks" type="button">В закладки</button>
+            </div>
             <div>
               <p>Перфоратор Bosch BFG 9000</p>
               <p><del>32500</del></p>
@@ -190,9 +192,11 @@
           </li>
           <li class="catalog-item">
             <p class="card-goods-new">New</p>
-            <img src="img/goods/BFG_3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
-            <button class="buy" type="button">Купить</button>
-            <button class="in-bookmarks" type="button">В закладки</button>
+            <img class="bfg-3000" src="img/goods/BFG_3000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 3000">
+            <div class="catalog-item-buttons">  
+              <button class="buy" type="button">Купить</button>
+              <button tton class="in-bookmarks" type="button">В закладки</button>
+            </div>
             <div>
               <p>Перфоратор Bosch BFG 3000</p>
               <p><del>25500</del></p>
@@ -200,10 +204,12 @@
             </div>
           </li>
           <li class="catalog-item">
-            <img src="img/goods/BFG_3000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
-            <button class="buy" type="button">Купить</button>
-            <button class="in-bookmarks" type="button">В закладки</button>
-            <div>
+            <img class="bfg-6000" src="img/goods/BFG_6000.jpg" width="144" height="128" alt="Перфоратор Bosch BFG 6000">
+            <div class="catalog-item-buttons">  
+              <button class="buy" type="button">Купить</button>
+              <button class="in-bookmarks" type="button">В закладки</button>
+            </div>
+              <div>
               <p>Перфоратор Bosch BFG 6000</p>
               <p><del>30500</del></p>
               <a href="#!">25500 Р.</a>
@@ -211,10 +217,12 @@
           </li>
           <li class="catalog-item">
             <p class="card-goods-new">New</p>
-            <img src="img/goods/BFG_2000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
-            <button class="buy" type="button">Купить</button>
-            <button class="in-bookmarks" type="button">В закладки</button>
-            <div>
+            <img class="bfg-2000" src="img/goods/BFG_2000.jpg" width="127" height="112" alt="Перфоратор Bosch BFG 2000">
+            <div class="catalog-item-buttons">  
+              <button class="buy" type="button">Купить</button>
+              <button class="in-bookmarks" type="button">В закладки</button>
+            </div>
+              <div>
               <p>Перфоратор Bosch BFG 2000</p>
               <p><del>22500</del></p>
               <a href="#!">12500 Р.</a>
@@ -275,7 +283,7 @@
                   <br>возгоранием,
                   вы всегда можете быть уверены в нашей <br>гарантии. Мы обменяем сгоревший товар на новый. <br>Дом уж
                   восстановите как-нибудь сами.
-                <img src="img/services/guarantee.png" width="468" height="261" alt="Гарантия">
+                <img src="img/services/guarantee.png" width="389" height="283" alt="Гарантия">
                 </p>
               </li>
               <li class="services-credit">
@@ -309,9 +317,49 @@
         <section class="adress">
           <h2>Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-          <img class="map" src="img/map_mini.png" width="300" height="158" alt="">
+          <a class="map" href="#!"><img src="img/modal/map_mini.png" width="300" height="158" alt=""></a>
           <a class="adress-button" href="#!">Заблудились? Напишите нам!</a>
+          <section class="modal-feedback">
+            <div class="modal-feedback-container">
+            <h2 class="visually-hidden">Окно обратной связи</h2>
+            <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="name-group">
+                  <label for="modal-feedback-name">Ваше имя:</label>
+                  <input type="text" name="modal-feedback-name" id="modal-feedback-name" placeholder="Имя Фамилия">
+                </div>
+                <div class="email-group">
+                  <label for="modal-feedback-email">Ваш e-mail:</label>
+                  <input type="email" name="modal-feedback-email" id="modal-feedback-email" placeholder="email@example.ru">
+                </div>
+                <div class="text-group">
+                  <label for="modal-feedback-text">Текст письма:</label>
+                  <textarea name="modal-feedback-text" id="modal-feedback-text" rows="6" cols="30"
+                    placeholder="В свободной форме"></textarea>
+                </div>
+              <div class="feedback-button-container">
+                <a class="feedback-button" href="#!">Отправить</a>
+              </div>
+            </form>
+            <a class="modal-close" >
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
+              </svg>
+            </a>
+          </div>
         </section>
+        <section class="map-popup">
+          <div></div>
+          <a class="image-map" href="#!">
+            <img src="img/modal/map-max.png" width="943" height="442"
+            alt="Наше местонахождение: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П">
+          </a>  
+          <a class="modal-close">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
+            </svg>
+          </a>
+        </section>
+      </section>
       </div>
     </div>
   </main>
@@ -394,58 +442,6 @@
     </div>
   </footer>
 
-
-
-  <section class="modal-feedback">
-    <h2 class="visually-hidden">Окно обратной связи</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <p class="name-group">
-        <label for="modal-feedback-name">Ваше имя:</label>
-        <input type="text" name="modal-feedback-name" id="modal-feedback-name" placeholder="Имя Фамилия">
-      </p>
-      <p class="email-group">
-        <label for="modal-feedback-email">Ваш e-mail:</label>
-        <input type="email" name="modal-feedback-email" id="modal-feedback-email" placeholder="email@example.ru">
-      </p>
-      <p class="text-group">
-        <label for="modal-feedback-text">Текст письма:</label>
-        <textarea name="modal-feedback-text" id="modal-feedback-text" rows="6" cols="30"
-          placeholder="В свободной форме"></textarea>
-      </p>
-      <div>
-        <a class="modal-feedback-button" href="#!">Отправить</a>
-      </div>
-    </form>
-    <button class="modal-close modal-feedback-close" type="button" name="modal-feedback-close">Закрыть</button>
-  </section>
-  <section class="map-popup">
-    <img src="img/map-max.png" width="943" height="449"
-      alt="Наше местонахождение: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П">
-    <button class="modal-close modal-map" type="button">Закрыть</button>
-  </section>
 </body>
 
 </html>
-<!-- <section class="modal-login-form">
-                <h2>Личный кабинет</h2>
-                <p class="modal-description">Введите, пожалуйста, свой логин и пароль</p>
-                <form action="https://echo.htmlacademy.ru" method="post">
-                  <p>
-                    <label for="login-login">Логин</label>
-                    <input class="login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.ru">
-                  </p>
-                  <p>
-                    <label for="login-password">Пароль</label>
-                    <input class="login-icon-password" type="password" id="login-password" name="password" placeholder="*********">
-                  </p>
-                  <p>
-                    <label>
-                      <input  class="login-help" type="checkbox" name="remember">
-                      Запомните меня
-                    </label>
-                    <a class="restore" href="#!">Я забыл пароль!</a>
-                  </p>
-                  <button type="submit">Войти</button>
-                </form>
-                <button type="button">Закрыть</button>
-              </section> -->

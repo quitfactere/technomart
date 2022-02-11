@@ -136,7 +136,7 @@ img {
 .main-header {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin-bottom: 20px;
+  margin-bottom: 59px;
   background-color: var(--neutral-basic);
 }
 
@@ -316,17 +316,30 @@ img {
 }
 
 .header-contacts a {
+  position: relative;
   display: block;
   width: 270px;
   height: 45px;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
   padding-top: 7px;
-  text-align: center;
+  padding-left: 74px;
+  text-align: start;
   color: var(--red-basic);
   font-weight: bold;
   font-size: 21px;
   border: 3px solid var(--white-basic);
   box-sizing: border-box;
+}
+
+.header-contacts a::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  background-image: url("../img/icons_header/icon-phone.svg");
 }
 
 .authorization-buttons {
@@ -444,13 +457,21 @@ img {
 
 .promo > div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 300px;
   height: 123px;
+  padding-left: 23px;
+  padding-right: 43px;
   font-size: 24px;
   font-weight: bold;
   color: var(--white-basic);
   box-sizing: border-box;
+}
+
+.promo > div:nth-of-type(2),
+.promo > div:nth-of-type(3),
+.promo > div:last-of-type {
+  padding-right: 31px;
 }
 
 .materials {
@@ -685,6 +706,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 89px;
   margin-bottom: 20px;
   padding-left: 28px;
   padding-right: 14px;
@@ -723,7 +745,7 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 220px;
   height: 318px;
@@ -732,6 +754,20 @@ img {
   font-weight: bold;
   text-align: center;
   border: 1px solid var(--gallery);
+  box-sizing: border-box;
+}
+
+.bfg-9000 {
+  margin-top: 5px;
+}
+
+.bfg-3000,
+.bfg-2000 {
+  margin-top: 29px;
+}
+
+.bfg-6000 {
+  margin-top: 22px;
 }
 
 .catalog-item div {
@@ -740,6 +776,11 @@ img {
   justify-content: space-between;
   height: 118px;
   background-color: transparent;
+}
+
+.catalog-item .catalog-item-buttons {
+  display: none;
+  margin-top: 38px;
 }
 
 .catalog-item p:not(.card-goods-new) {
@@ -766,9 +807,9 @@ img {
   box-sizing: border-box;
 }
 
-/*.catalog-item:hover img {
+.catalog-item:hover img {
   display: none;
-}*/
+}
 
 .catalog-item:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -784,6 +825,7 @@ img {
 }
 
 .buy {
+  margin-bottom: 10px;
   color: var(--white-basic);
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
@@ -801,15 +843,12 @@ img {
   border: 3px solid var(--green-basic);
 }
 
-/*.catalog-item:hover .buy,
+.catalog-item:hover .catalog-item-buttons, 
+.catalog-item:hover .buy,
 .catalog-item:hover .in-bookmarks {
   display: block;
 }
 
-.catalog-item:hover .card-goods-new {
-  display: none;
-}
-*/
 .buy:hover {
   background-color: var(--green-apple);
 }
@@ -837,6 +876,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 89px;
   margin-bottom: 20px;
   padding-left: 28px;
   padding-right: 14px;
@@ -899,6 +939,7 @@ img {
 /*================================================ Сервисы ============================================*/
 
 .services {
+  margin-bottom: 70px;
   background-color: var(--neutral-basic);
 }
 
@@ -906,13 +947,14 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows:  auto auto auto;
-  padding-top: 60px;
+  padding-top: 62px;
   box-sizing: border-box;
 }
 
 .services h2 {
   grid-row: 1 / 2;
   margin: 0;
+  margin-bottom: 22px;
   font-size: 30px;
   font-weight: normal;
   text-transform: uppercase;
@@ -921,6 +963,7 @@ img {
 .services-description {
   grid-row: 2 / 3;
   width: 410px;
+  margin: 0;
   margin-bottom: 70px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
@@ -929,7 +972,6 @@ img {
 
 .services-container {
   display: flex;
-  margin-bottom: 70px;
 }
 
 .services-container input[type="radio"] {
@@ -937,9 +979,21 @@ img {
 }
 
 .services-slider {
+  position: relative;
   margin: 0;
   margin-right: 80px;
   list-style: none;
+}
+
+.services-slider::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/services/services_layer.png");
+  background-repeat: no-repeat;
 }
 
 .services-slider label {
@@ -977,24 +1031,12 @@ img {
   height: 285px;
 }
 
-.services-list img{
+.services-list img {
   position: absolute;
   bottom: 0;
   right: 0;
 }
-/*
-.services-delivery {
-  background: url("../img/services/delivery.png") no-repeat right top;
-}
 
-.services-guarantee {
-  background: url("../img/services/guarantee.png") no-repeat right top;
-}
-
-.services-credit {
-  background: url("../img/services/credit.png") no-repeat right top;
-}
-*/
 .services-delivery h3,
 .services-guarantee h3,
 .services-credit h3 {
@@ -1055,6 +1097,7 @@ img {
 /*=================================================== О нас и контакты ===========================================================*/
 
 .about-and-contacts {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 180px;
@@ -1091,7 +1134,19 @@ img {
 }
 
 .transport-companies li {
+  position: relative;
   margin-bottom: 12px;
+  padding-left: 37px;
+}
+
+.transport-companies li::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-image: url("../img/redline.svg");
 }
 
 .about-us-button {
@@ -1136,6 +1191,148 @@ img {
   font-size: 14px;
   text-transform: uppercase;
   background-color: var(--red-basic);
+}
+/*======================================================= Модальное окно обратной связи =================================================*/
+
+.modal-feedback {
+  position: absolute;
+  display: none;
+  top: -40px;
+  left: calc(50% - 310px);
+  width: 620px;
+  height: 430px;
+  background-color: var(--white-basic);
+  box-shadow: inset 0 7px 0 0 var(--red-basic),
+              0 0 10px -5px var(--black-basic);
+}
+
+.adress-button:focus ~ .modal-feedback {
+  display: block;
+}
+
+.modal-feedback-container {
+  position: relative;
+  padding-top: 46px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.feedback-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form label {
+  margin-bottom: 17px;
+}
+
+.name-group {
+  margin-left: 80px;
+  margin-right: 20px;
+  margin-bottom: 18px;
+}
+
+.email-group {
+  margin-right: 80px;
+}
+
+.name-group label {
+  font-size: 18px;
+}
+
+.name-group input {
+  width: 220px;
+  height: 38px;
+  border: 2px solid #C5C5C5;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.email-group label {
+  font-size: 18px;
+}
+
+.email-group input {
+  width: 220px;
+  height: 38px;
+  border: 2px solid #C5C5C5;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.text-group {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 37px;
+}
+
+.text-group label {
+  font-size: 18px;
+}
+
+.text-group textarea {
+  width: 460px;
+  height: 114px;
+  border: 2px solid #C5C5C5;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.feedback-button-container {
+  width: 620px;
+  height: 112px;
+  background-color: var(--wild-sand);
+}
+
+.feedback-button {
+  display: block;
+  width: 460px;
+  height: 38px;
+  margin: 37px auto;
+  padding: 10px 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--white-basic);
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: var(--red-basic);
+}
+
+.modal-close {
+  position: absolute;
+  top: 21px;
+  right: 11px;
+}
+
+
+/*============================================= Модальное оконо с картой================================== */
+
+.map-popup {
+  position: absolute;
+  left: 0;
+  top: 0%;
+  display: none;
+  width: 943px;
+  height: 449px;
+  background-color: var(--white-basic);
+  box-shadow: inset 0 7px 0 0 var(--red-basic),
+              0px 0px 14.7px rgba(47, 42, 43, 0.5);
+}
+
+.map-popup div {
+  width: 100%;
+  height: 7px;
+  background-color: var(--red-basic);
+}
+
+.map-popup img {
+  margin-top: 7px;
+  width: 943px;
+  height: 442px;
 }
 
 /*=========================================================== Футер ============================================================*/
@@ -1262,79 +1459,9 @@ img {
   text-decoration: none;
 }
 
-/*======================================================= Модальное окно обратной связи =================================================*/
-
-.modal-feedback {
-  width: 620px;
-  height: 430px;
-  box-shadow: inset 0 7px 0 0 var(--red-basic);
-}
-
-.name-group label {
-  font-size: 18px;
-}
-
-.name-group input {
-  width: 220px;
-  height: 38px;
-  border: 2px solid #C5C5C5;
-  box-sizing: border-box;
-  border-radius: 2px;
-}
-
-.email-group label {
-  font-size: 18px;
-}
-
-.email-group input {
-  width: 220px;
-  height: 38px;
-  border: 2px solid #C5C5C5;
-  box-sizing: border-box;
-  border-radius: 2px;
-}
-
-.text-group label {
-  font-size: 18px;
-}
-
-.text-group textarea {
-  width: 460px;
-  height: 114px;
-  border: 2px solid #C5C5C5;
-  box-sizing: border-box;
-  border-radius: 2px;
-}
-
-.modal-feedback div {
-  width: 620px;
-  height: 112px;
-  background-color: var(--wild-sand);
-}
-
-.modal-feedback-button {
-  display: block;
-  width: 460px;
-  height: 38px;
-  padding: 10px 0;
-  box-sizing: border-box;
-  text-align: center;
-  color: var(--white-basic);
-  font-size: 14px;
-  text-transform: uppercase;
-  background-color: var(--red-basic);
-}
-
-/*============================================= Модальное оконо с картой================================== */
-
-.map-popup {
-  width: 943px;
-  height: 449px;
-  box-shadow: inset 0 7px 0 0 var(--red-basic);
-  box-shadow: 0px 0px 14.7px rgba(47, 42, 43, 0.5);
-}
 
 /*///////////////////////////////////////////////////////////////////       \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
 /*================================================================== Каталог ========================================================*/
 
 /*===================================== Шапка каталога, блок пользовательского меню ==================================*/
