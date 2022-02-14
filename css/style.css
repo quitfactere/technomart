@@ -959,15 +959,11 @@ img {
 }
 
 .services .wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows:  auto auto auto;
   padding-top: 62px;
   box-sizing: border-box;
 }
 
 .services h2 {
-  grid-row: 1 / 2;
   margin: 0;
   margin-bottom: 22px;
   font-size: 30px;
@@ -976,10 +972,9 @@ img {
 }
 
 .services-description {
-  grid-row: 2 / 3;
   width: 410px;
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 67px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -997,7 +992,6 @@ img {
   position: relative;
   margin: 0;
   margin-right: 80px;
-  list-style: none;
 }
 
 .services-slider::after {
@@ -1015,11 +1009,12 @@ img {
   display: flex;
   align-items: center;
   width: 240px;
-  height: 61px;
+  height: 63px;
   padding-left: 22px;
   font-size: 21px;
   color: var(--white-basic);
   background-color: var(--dark-basic);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
   box-sizing: border-box;
 }
 
@@ -1061,12 +1056,21 @@ img {
   text-transform: uppercase;
 }
 
+.services-credit h3 {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
 .services-delivery p,
 .services-guarantee p,
 .services-credit p {
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
+}
+
+.services-credit p {
+  margin-bottom: 28px;
 }
 
 #btn-1:checked ~ .services-slider label[for="btn-1"] {
