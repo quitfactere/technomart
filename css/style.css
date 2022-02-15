@@ -1102,7 +1102,7 @@ img {
 
 .credit-button {
   display: block;
-  width: 192px;
+  width: 195px;
   height: 38px;
   padding: 10px 0;
   box-sizing: border-box;
@@ -1123,11 +1123,9 @@ img {
   margin-bottom: 70px;
 }
 
-.about-us {
-
-}
-
 .about-us h2 {
+  margin: 0;
+  margin-bottom: 24px;
   font-size: 30px;
   font-weight: normal;
   text-transform: uppercase;
@@ -1137,15 +1135,19 @@ img {
   width: 460px;
   height: auto;
   margin: 0;
+  margin-bottom: 5px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: normal;
 }
 
+.about-us p:first-of-type {
+  margin-bottom: 25px;
+}
+
 .transport-companies {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
   list-style: none;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
@@ -1154,6 +1156,7 @@ img {
 
 .transport-companies li {
   position: relative;
+  height: 23px;
   margin-bottom: 12px;
   padding-left: 37px;
 }
@@ -1161,7 +1164,7 @@ img {
 .transport-companies li::before {
   content: "";
   position: absolute;
-  top: 55%;
+  top: 10px;
   left: 0;
   width: 25px;
   height: 2px;
@@ -1182,6 +1185,8 @@ img {
 }
 
 .adress h2 {
+  margin: 0;
+  margin-bottom: 24px;
   font-size: 30px;
   font-weight: normal;
   text-transform: uppercase;
@@ -1195,8 +1200,8 @@ img {
   font-weight: normal;
 }
 
-.map {
-  margin-bottom: 25px;
+.map img {
+  margin-bottom: 20px;
 }
 
 .adress-button {
@@ -1359,7 +1364,6 @@ img {
 .main-footer {
   display: grid;
   grid-template-rows: 1fr 1fr;
-
 }
 
 .footer-contacts-navigation {
@@ -1373,18 +1377,22 @@ img {
   grid-template-columns: auto 1fr;
 }
 
-.contacts p {
+.footer-logo-container {
+  margin-bottom: 22px;
+  padding: 20px 41px;
+}
+
+.footer-contacts p {
   width: 333px;
-  margin-right: 58px;
+  margin: 0 58px 0 3px;
   line-height: 24px;
 }
 
 .footer-general-navigation {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   height: 193px;
-  padding-bottom: 50px;
+  padding-top: 39px;
   box-sizing: border-box;
 }
 
@@ -1394,6 +1402,10 @@ img {
   justify-content: space-between;
   width: 546px;
   list-style: none;
+}
+
+.footer-navigation {
+  margin-bottom: 37px;
 }
 
 .footer-navigation a:hover,
@@ -1418,10 +1430,8 @@ img {
   background-color: var(--dark-pickled-bluewood); 
 }
 
-
 .footer-copyright-socials .wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
   font-size: 16px;
@@ -1432,9 +1442,12 @@ img {
 .footer-about-us {
   width: 226px;
   margin: 0;
+  margin-right: 163px;
 }
 
 .socials {
+  margin-top: 7px;
+  margin-right: 118px;
 }
 
 .socials-list {
