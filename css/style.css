@@ -622,8 +622,8 @@ img {
   position: absolute;
   display: flex;
   justify-content: space-between;
-  left: 45%;
-  bottom: 36px;
+  top: 222px;
+  left: 295px;
   width: 30px;
   height: 10px;
 }
@@ -641,7 +641,7 @@ img {
 .slider-control-arrows {
   z-index: 1;
   position: absolute;
-  top: 50%;
+  top: 143px;
   left: 50%;
   display: flex;
   justify-content: space-between;
@@ -761,7 +761,6 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   width: 220px;
   height: 318px;
   overflow: hidden;
@@ -774,21 +773,25 @@ img {
 
 .bfg-9000 {
   margin-top: 5px;
+  margin-left: 18px;
 }
 
 .bfg-3000,
 .bfg-2000 {
   margin-top: 29px;
+  margin-left: 40px;
 }
 
 .bfg-6000 {
   margin-top: 22px;
+  margin-left: 33px;
 }
 
 .catalog-item div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 185px;
   height: 118px;
   background-color: transparent;
 }
@@ -800,6 +803,7 @@ img {
 
 .catalog-item p:not(.card-goods-new) {
   margin: 0;
+  margin-left: 18px;
 }
 
 .catalog-item del {
@@ -835,6 +839,7 @@ img {
   display: none;
   width: 135px;
   height: 38px;
+  margin: 0 auto;
   border: none;
   border-radius: 2px;
 }
