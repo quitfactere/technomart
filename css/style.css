@@ -717,7 +717,7 @@ img {
   margin-bottom: 70px;
 }
 
-.popular-goods div {
+.popular-goods > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -760,40 +760,32 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: 220px;
   height: 318px;
   overflow: hidden;
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
   border: 1px solid var(--gallery);
   box-sizing: border-box;
 }
 
 .bfg-9000 {
-  margin-top: 5px;
+  margin-top: 4px;
   margin-left: 18px;
+  margin-bottom: 9px;
 }
 
 .bfg-3000,
 .bfg-2000 {
-  margin-top: 29px;
+  margin-top: 28px;
   margin-left: 40px;
+  margin-bottom: 37px;
 }
 
 .bfg-6000 {
-  margin-top: 22px;
+  margin-top: 21px;
   margin-left: 33px;
-}
-
-.catalog-item div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 185px;
-  height: 118px;
-  background-color: transparent;
+  margin-bottom: 28px;
 }
 
 .catalog-item .catalog-item-buttons {
@@ -802,11 +794,16 @@ img {
 }
 
 .catalog-item p:not(.card-goods-new) {
-  margin: 0;
-  margin-left: 18px;
+  margin: 0 27px 7px 34px;
+  text-align: center;
+}
+
+.catalog-item p:first-of-type:not(.card-goods-new) {
+  margin-bottom: 7px;
 }
 
 .catalog-item del {
+  margin: 0;
   font-size: 17px;
   color: var(--silver-chalice);
   text-decoration: line-through;
