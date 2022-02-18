@@ -442,6 +442,7 @@ img {
   width: 100%;
   height: 100%;
   padding: 18px 0 20px 0;
+  font-size: 18px;
   color: var(--white-basic);
   box-sizing: border-box;
 }
@@ -553,16 +554,16 @@ img {
 
 .card-goods-new {
   position: absolute;
-  top: -10px;
-  right: -30px;
+  top: -6px;
+  right: -26px;
   width: 100px;
   height: 30px;
-  padding-top: 8px;
+  padding-top: 7px;
+  padding-left: 35px;
   transform: rotate(45deg);
   overflow: hidden;
   font-size: 14px;
   text-transform: uppercase;
-  text-align: center;
   color: var(--white-basic);
   background-color: var(--red-basic);
   box-sizing: border-box;
@@ -769,37 +770,65 @@ img {
   box-sizing: border-box;
 }
 
-.bfg-9000 {
-  margin-top: 4px;
-  margin-left: 18px;
+.bfg-img-9000 {
+  margin-top: 5px;
+  margin-left: 17px;
   margin-bottom: 9px;
 }
 
-.bfg-3000,
-.bfg-2000 {
+.bfg-img-3000,
+.bfg-img-2000 {
   margin-top: 28px;
-  margin-left: 40px;
-  margin-bottom: 37px;
+  margin-left: 39px;
+  margin-bottom: 38px;
 }
 
-.bfg-6000 {
+.bfg-img-6000 {
   margin-top: 21px;
-  margin-left: 33px;
-  margin-bottom: 28px;
+  margin-left: 32px;
+  margin-bottom: 29px;
 }
 
 .catalog-item .catalog-item-buttons {
   display: none;
   margin-top: 38px;
+  margin-bottom: 54px;
 }
 
-.catalog-item p:not(.card-goods-new) {
-  margin: 0 27px 7px 34px;
+.bfg-9000-caption {
+  margin: 1px 30px 5px 31px;
   text-align: center;
 }
 
-.catalog-item p:first-of-type:not(.card-goods-new) {
-  margin-bottom: 7px;
+.bfg-9000-old-price {
+  margin: 0 0 12px 77px;
+}
+
+.bfg-3000-caption {
+  margin: 1px 31px 5px 30px;
+  text-align: center;
+}
+
+.bfg-3000-old-price {
+  margin: 0 0 12px 76px;
+}
+
+.bfg-6000-caption {
+  margin: 1px 30px 5px 31px;
+  text-align: center;
+}
+
+.bfg-6000-old-price {
+  margin: 0 0 12px 77px;
+}
+
+.bfg-2000-caption {
+  margin: 1px 31px 5px 30px;
+  text-align: center;
+}
+
+.bfg-2000-old-price {
+  margin: 0 0 12px 76px;
 }
 
 .catalog-item del {
@@ -813,7 +842,7 @@ img {
   display: block;
   width: 141px;
   height: 38px;
-  padding-top: 10px;
+  padding-top: 9px;
   font-size: 17px;
   color: var(--white-basic);
   background-color: var(--red-basic);
@@ -821,6 +850,26 @@ img {
                     linear-gradient(135deg, transparent 89%, var(--white-basic) 89%);
   border-radius: 2px;
   box-sizing: border-box;
+}
+
+.bfg-9000 a {
+  margin: 0 0 0 46px;
+  padding-left: 33px;
+}
+
+.bfg-3000 a {
+  margin: 0 0 0 44px;
+  padding-left: 33px;
+}
+
+.bfg-6000 a {
+  margin: 0 0 0 44px;
+  padding-left: 33px;
+}
+
+.bfg-2000 a {
+  margin: 0 0 0 44px;
+  padding-left: 33px;
 }
 
 .catalog-item:hover img {
