@@ -823,7 +823,7 @@ img {
 }
 
 .bfg-2000-caption {
-  margin: 1px 31px 5px 30px;
+  margin: 1px 31px 39px 30px;
   text-align: center;
 }
 
@@ -1271,9 +1271,9 @@ img {
 
 .modal-feedback {
   position: absolute;
-  display: none;
   top: -40px;
-  left: calc(50% - 310px);
+  left: calc(49% - 310px);
+  display: none;
   width: 620px;
   height: 430px;
   background-color: var(--white-basic);
@@ -1383,13 +1383,12 @@ img {
   right: 11px;
 }
 
-
 /*============================================= Модальное оконо с картой================================== */
 
 .map-popup {
   position: absolute;
-  left: 0;
-  top: 0%;
+  top: -60px;
+  left: calc(50% - 471.5px);
   display: none;
   width: 943px;
   height: 449px;
@@ -1405,16 +1404,17 @@ img {
 }
 
 .map-popup img {
-  margin-top: 7px;
   width: 943px;
   height: 442px;
+}
+
+.map:focus ~ .map-popup {
+  display: block;
 }
 
 /*=========================================================== Футер ============================================================*/
 
 .main-footer {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
 }
 
 .footer-contacts-navigation {
@@ -1589,6 +1589,7 @@ img {
 /*==================================================Основное содержимое каталога ====================================*/
 
 .catalog-main {
+  position: relative;
   font-family: "PTSans", "Arial", sans-serif;
 }
 
@@ -1712,7 +1713,7 @@ img {
   height: 194px;
   margin-bottom: 16px;
   box-sizing: border-box;
-  border-bottom: 1px solid var(--silver-chalice);
+  border-bottom: 1px solid var(--mercury);
 }
 
 .filter-price legend,
@@ -1793,13 +1794,14 @@ img {
   border-radius: 5px;
 }
 
-.filter-manufacterers {
+.filter-form .filter-manufacterers {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 220px;
   height: 251px;
-  border-bottom: 1px solid var(--silver-chalice);
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--mercury);
 }
 
 .filter-manufacterers ul {
@@ -1843,21 +1845,84 @@ img {
   background-repeat: no-repeat;
 }
 
+.filter-input-checkbox:hover + label::before {
+  background-image: url("../img/Catalog/checkbox-off-hover.svg");
+}
+
+.filter-input-checkbox:checked:hover + label::before {
+  background-image: url("../img/Catalog/checkbox-on-hover.svg");
+}
+
 .filter-form .supply {
   width: 220px;
   height: 116.85px;
-  margin-bottom: 37px;
   border: none;
-  border-top: 2px solid var(--greylight);
   box-sizing: border-box;
 }
 
-.supply ul {
+.supply div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 66px;
   list-style: none;
+}
+
+.supply label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--white-basic);
+  box-shadow: inset 0 0 0 4px var(--greylight);
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--white-basic);
+  box-shadow: inset 0 0 0 4px var(--greylight);
+  border-radius: 50%;
+}
+
+.filter-input-radio:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -27.5px;
+  top: 7.5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--greylight);
+  border-radius: 50%;
+}
+
+.supply label:hover::before {
+  box-shadow: inset 0 0 0 4px  var(--grey-nobel);
+}
+
+.supply label:hover::after {
+  background-color: var(--grey-nobel);
+}
+
+.filter-form button {
+  width: 220px;
+  height: 38px;
+  font-size: 13px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid var(--mercury);
 }
 
 /*=============================================================== Каталог, карточки товаров ========================================== */
@@ -2022,9 +2087,23 @@ img {
 /*====================================================== Попап о добавлении товара в корзину ===========================================*/
 
 .good_in_basket {
+  position: absolute;
+  top: 314px;
+  left: calc(50% - 295px);
   width: 620px;
   height: 282px;
-  box-shadow: inset 0 7px 0 0 var(--red-basic);
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 27px;
+  background-color: var(--white-basic);
+  box-shadow: inset 0 7px 0 0 var(--red-basic),
+              0px 4px 20px rgba(0, 0, 0, 0.15);;
+}
+
+.good_in_basket div:first-of-type {
+  height: 170px;
+  padding-top: 33px;
+  padding-left: 99px;
+  box-sizing: border-box;
 }
 
 .good_in_basket p {
@@ -2032,13 +2111,20 @@ img {
   font-weight: bold;
 }
 
-.good_in_basket div {
+.good_in_basket img {
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+.good_in_basket div:last-of-type {
+  height: 112px;
   background-color: var(--seashell);
 }
 
 .good_in_basket .button {
   width: 192px;
   height: 38px;
+  margin: 37px 0;
   padding: 10px 0;
   box-sizing: border-box;
   text-align: center;
@@ -2046,6 +2132,12 @@ img {
   font-size: 14px;
   text-transform: uppercase;
   background-color: var(--red-basic);
+  border: none;
+}
+
+.good_in_basket .button:first-child {
+  margin-left: 114px;
+  margin-right: 10px;
 }
 
 .good_in_basket .button:last-child {
