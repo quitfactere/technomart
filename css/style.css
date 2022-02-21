@@ -311,7 +311,7 @@ img {
   margin-left: 30px;
   margin-right: 93px;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 24px;
   font-style: italic;
   color: var(--red-basic);
 }
@@ -329,9 +329,9 @@ img {
   display: block;
   width: 270px;
   height: 45px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   padding-top: 7px;
-  padding-left: 74px;
+  padding-left: 71px;
   text-align: start;
   color: var(--red-basic);
   font-weight: bold;
@@ -344,7 +344,7 @@ img {
   content: "";
   position: absolute;
   top: 10px;
-  left: 40px;
+  left: 36px;
   display: inline-block;
   width: 18px;
   height: 19px;
@@ -827,6 +827,10 @@ img {
   text-align: center;
 }
 
+.index-bfg-2000-caption {
+  margin-bottom: 5px;
+}
+
 .bfg-2000-old-price {
   margin: 0 0 12px 76px;
 }
@@ -880,8 +884,8 @@ img {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.buy,
-.in-bookmarks {
+.catalog-item .buy,
+.catalog-item .in-bookmarks {
   display: none;
   width: 135px;
   height: 38px;
@@ -890,17 +894,25 @@ img {
   border-radius: 2px;
 }
 
-.buy {
+.catalog-item .buy {
   margin-bottom: 10px;
+  padding-left: 24px;
   color: var(--white-basic);
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
   background-color: var(--green-basic);
-  box-shadow: inset 0 -3px 0 var(--bilbao);
+  background-image: url("../img/icons_header/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 25px 10px;
+  box-shadow: inset 0 -3px 0 0 var(--bilbao);
 }
 
-.in-bookmarks {
+#good-in-basket:target {
+  display: block;
+}
+
+.catalog-item .in-bookmarks {
   font-family: "Cuprum", "Arial", sans-serif;
   color: var(--dark-basic);
   text-transform: uppercase;
@@ -915,11 +927,11 @@ img {
   display: block;
 }
 
-.buy:hover {
+.catalog-item .buy:hover {
   background-color: var(--green-apple);
 }
 
-.buy:active {
+.catalog-item .buy:active {
   background-color: var(--green-click);
 }
 
@@ -1571,6 +1583,18 @@ img {
   font-size: 21px;
 }
 
+.profile-icon:hover path {
+  fill: var(--fiord);
+}
+
+.profile-icon:active path {
+  fill: var(--greylight);
+}
+
+.profile-link:active p {
+  color: var(--greylight);
+}
+
 .profile-container ul {
   position: relative;
   display: flex;
@@ -1578,6 +1602,14 @@ img {
   padding-left: 5px;
   list-style: none;
   color: var(--dark-basic);
+}
+
+.cabinet-link:hover {
+  color: var(--red-basic);
+}
+
+.cabinet-link:active {
+  color: var(--greylight);
 }
 
 .catalog-header-circle {
@@ -2036,7 +2068,7 @@ img {
   padding: 7.5px 0; /* ! 7.5px */
   text-align: center;
   border: 1px solid var(--mercury);
-  border-radius: 2px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
@@ -2078,6 +2110,7 @@ img {
 }
 
 .about-perfs p {
+  margin: 0;
   padding-bottom: 68px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
@@ -2086,10 +2119,11 @@ img {
 
 /*====================================================== Попап о добавлении товара в корзину ===========================================*/
 
-.good_in_basket {
+.good-in-basket {
   position: absolute;
   top: 314px;
   left: calc(50% - 295px);
+  display: none;
   width: 620px;
   height: 282px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -2099,29 +2133,29 @@ img {
               0px 4px 20px rgba(0, 0, 0, 0.15);;
 }
 
-.good_in_basket div:first-of-type {
+.good-in-basket div:first-of-type {
   height: 170px;
   padding-top: 33px;
   padding-left: 99px;
   box-sizing: border-box;
 }
 
-.good_in_basket p {
+.good-in-basket p {
   font-size: 24px;
   font-weight: bold;
 }
 
-.good_in_basket img {
+.good-in-basket img {
   margin-right: 30px;
   vertical-align: middle;
 }
 
-.good_in_basket div:last-of-type {
+.good-in-basket div:last-of-type {
   height: 112px;
   background-color: var(--seashell);
 }
 
-.good_in_basket .button {
+.good-in-basket .button {
   width: 192px;
   height: 38px;
   margin: 37px 0;
@@ -2135,12 +2169,12 @@ img {
   border: none;
 }
 
-.good_in_basket .button:first-child {
+.good-in-basket .button:first-child {
   margin-left: 114px;
   margin-right: 10px;
 }
 
-.good_in_basket .button:last-child {
+.good-in-basket .button:last-child {
   color: var(--black-basic);
   background-color: var(--white-basic);
 }
