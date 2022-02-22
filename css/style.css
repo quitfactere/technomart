@@ -491,6 +491,7 @@ img {
 }
 
 .materials {
+  position: relative;
   overflow: hidden;
   background-color: var(--yellow-orange);
 }
@@ -514,14 +515,11 @@ img {
 .promo h3 {
   width: 141px;
   margin: 0;
+  margin-top: 3px;
   font-size: 24px;
 }
 
-.materials div,
-.tools div,
-.machinery div,
-.discount div,
-.delivery div {
+.promo-inner-block {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -535,21 +533,13 @@ img {
   background-color: var(--white-opacity-0-3);
 }
 
-.materials a,
-.tools a,
-.machinery a,
-.discount a,
-.delivery a {
+.promo-card a {
   padding: 10px 0;
   font-size: 14px;
   color: var(--white-basic);
   text-transform: uppercase;
   text-align: center;
   box-sizing: border-box;
-}
-
-.materials {
-  position: relative;
 }
 
 .card-goods-new {
@@ -569,11 +559,7 @@ img {
   box-sizing: border-box;
 }
 
-.materials .promo-button:hover,
-.tools .promo-button:hover,
-.machinery .promo-button:hover,
-.discount .promo-button:hover,
-.delivery .promo-button:hover {
+.promo-card .promo-button:hover {
   background-color: var(--greylight-opacity-0-3);
 }
 
