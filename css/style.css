@@ -766,6 +766,11 @@ img {
   index
 }
 
+.catalog-item:hover,
+.catalog-item:focus-within {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
 .bfg-img-9000 {
   margin-top: 5px;
   margin-left: 17px;
@@ -789,6 +794,64 @@ img {
   display: none;
   margin-top: 38px;
   margin-bottom: 54px;
+}
+
+.buy,
+.in-bookmarks {
+  display: block;
+  width: 135px;
+  height: 38px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 2px;
+}
+
+.buy {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 10px 40px 10px 53px;
+  color: var(--white-basic);
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: var(--green-basic);
+  box-shadow: inset 0 -3px 0 0 var(--bilbao);
+  box-sizing: border-box;
+}
+
+.buy::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icons_header/icon-cart.svg");
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.catalog-item .in-bookmarks {
+  position: relative;
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: var(--dark-basic);
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: transparent;
+  border: 3px solid var(--green-basic);
+}
+
+.catalog-item:focus-within img,
+.catalog-item:hover img,
+.catalog-item:focus img {
+  display: none;
+}
+
+.catalog-item:hover .catalog-item-buttons, 
+.catalog-item:hover .buy,
+.catalog-item:hover .in-bookmarks,
+.catalog-item:focus-within .catalog-item-buttons {
+  display: block;
 }
 
 .bfg-9000-caption {
@@ -838,7 +901,6 @@ img {
   text-decoration: line-through;
 }
 
-
 .catalog-item-price {
   display: block;
   width: 141px;
@@ -873,68 +935,6 @@ img {
   padding-left: 33px;
 }
 
-.catalog-item:hover {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.catalog-item:hover img,
-.catalog-item:focus img {
-  display: none;
-}
-
-.buy,
-.in-bookmarks {
-  width: 135px;
-  height: 38px;
-  margin: 0 auto;
-  border: none;
-  border-radius: 2px;
-}
-
-.buy {
-  position: relative;
-  display: block;
-  margin-bottom: 10px;
-  padding: 10px 40px 10px 53px;
-  color: var(--white-basic);
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  background-color: var(--green-basic);
-  box-shadow: inset 0 -3px 0 0 var(--bilbao);
-  box-sizing: border-box;
-}
-
-.buy::before {
-  content: "";
-  position: absolute;
-  left: 25px;
-  width: 15px;
-  height: 15px;
-  background-image: url("../img/icons_header/icon-cart.svg");
-  opacity: 0.3;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.catalog-item .in-bookmarks {
-  font-family: "Cuprum", "Arial", sans-serif;
-  color: var(--dark-basic);
-  text-transform: uppercase;
-  font-size: 14px;
-  background-color: transparent;
-  border: 3px solid var(--green-basic);
-}
-
-.catalog-item:hover .catalog-item-buttons, 
-.catalog-item:hover .buy,
-.catalog-item:hover .in-bookmarks,
-.catalog-item:focus .catalog-item-buttons, 
-.catalog-item:focus .buy,
-.catalog-item:focus .in-bookmarks  {
-  display: block;
-}
-
 .catalog-item .buy:hover {
   background-color: var(--green-apple);
 }
@@ -943,8 +943,17 @@ img {
   background-color: var(--green-click);
 }
 
+.in-bookmarks:hover {
+  border-color: var(--dark-basic);
+}
+
 .in-bookmarks:active {
   opacity: 0.5;
+}
+
+.catalog-item .buy:focus,
+.catalog-item .in-bookmarks:focus {
+  outline: 3px dotted var(--feijoa);
 }
 
 /*=========================================== Популярные производители ==========================================*/
@@ -2137,7 +2146,7 @@ img {
 
 
 .good-in-basket {
-  position: absolute;
+  position: fixed;
   top: 160px;
   left: calc(50% - 410px);
   display: none;
