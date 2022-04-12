@@ -131,7 +131,7 @@ img {
 }
 
 *:focus {
-  outline: 3px dotted var(--feijoa);
+  outline: 1px dotted var(--black-basic);
 }
 
 /*================================================== Заголовок страницы ==================================================*/
@@ -953,7 +953,7 @@ img {
 
 .catalog-item .buy:focus,
 .catalog-item .in-bookmarks:focus {
-  outline: 3px dotted var(--feijoa);
+  outline: 1px dotted var(--black-basic);
 }
 
 /*=========================================== Популярные производители ==========================================*/
@@ -1260,7 +1260,7 @@ img {
   background-color: var(--red-basic);
 }
 
-.adress h2 {
+.contacts h2 {
   margin: 0;
   margin-bottom: 24px;
   font-size: 30px;
@@ -1268,7 +1268,7 @@ img {
   text-transform: uppercase;
 }
 
-.adress p {
+.contacts p {
   width: 180px;
   margin-bottom: 32px;
   font-size: 13px;
@@ -1305,7 +1305,7 @@ img {
   box-shadow: inset 0 7px 0 0 var(--red-basic),
               0 0 10px -5px var(--black-basic);
 }
-/*
+/* отображать окно силами CSS
 .adress-button:focus ~ .modal-feedback {
   display: block;
 }
@@ -1413,7 +1413,8 @@ img {
   border: none;
 }
 
-.modal-feedback .feedback-close {
+.modal-feedback .feedback-close,
+.map-close {
   position: absolute;
   top: 21px;
   right: 11px;
@@ -1445,10 +1446,14 @@ img {
   height: 442px;
 }
 
+.map-show {
+  display: block;
+}
+/* отображать окно средствами CSS
 .map:focus ~ .map-popup {
   display: block;
 }
-
+*/
 /*=========================================================== Футер ============================================================*/
 
 .main-footer {
