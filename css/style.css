@@ -141,6 +141,7 @@ img {
   display: grid;
   grid-template-rows: auto 1fr auto;
   margin-bottom: 59px;
+  height: 320px;
   background-color: var(--neutral-basic);
 }
 
@@ -390,7 +391,7 @@ img {
 
 .authorization-buttons .registration-button {
   width: 150px;
-  padding: 12px 24px;
+  padding: 10px 24px;
   background-color: var(--white-basic);
   box-sizing: border-box;
 }
@@ -477,58 +478,118 @@ img {
   margin-bottom: 59px;
 }
 
-.promo > div {
+.promo-card {
   display: flex;
-  justify-content: space-between;
   width: 300px;
   height: 123px;
-  padding-left: 23px;
-  padding-right: 43px;
   font-size: 24px;
   font-weight: bold;
   color: var(--white-basic);
   box-sizing: border-box;
 }
 
-.promo > div:nth-of-type(2),
-.promo > div:nth-of-type(3),
-.promo > div:last-of-type {
-  padding-right: 31px;
-}
-
 .materials {
   position: relative;
   overflow: hidden;
+  padding-top: 21px;
+  padding-left: 23px;
+  padding-bottom: 21px;
   background-color: var(--yellow-orange);
 }
 
 .tools {
+  padding-top: 21px;
+  padding-left: 22px;
+  padding-bottom: 21px;
   background-color: var(--picton-blue);
 }
 
 .machinery {
+  padding-top: 21px;
+  padding-left: 22px;
+  padding-bottom: 21px;
   background-color: var(--light-orchid);
 }
 
 .discount {
+  padding-top: 21px;
+  padding-left: 22px;
+  padding-bottom: 22px;
   background-color: var(--feijoa);
 }
 
 .delivery {
+  padding-top: 21px;
+  padding-left: 22px;
+  padding-bottom: 21px;
   background-color: var(--yellow-orange);
-}
-
-.promo h3 {
-  width: 141px;
-  margin: 0;
-  margin-top: 3px;
-  font-size: 24px;
 }
 
 .promo-inner-block {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.materials .promo-inner-block {
+  margin-right: 50px;
+}
+
+.tools .promo-inner-block {
+  margin-right: 31px;
+}
+
+.machinery .promo-inner-block {
+  margin-right: 27px;
+}
+
+.discount .promo-inner-block {
+  margin-right: 31px;
+}
+
+.delivery .promo-inner-block {
+  margin-right: 27px;
+}
+
+.promo h3 {
+  width: 141px;
+  margin: 0;
+  font-size: 24px;
+}
+
+.promo-card h3 {
+  margin-bottom: 15px;
+}
+
+.tools h3 {
+  margin-bottom: 15px;
+}
+
+.promo-card img {
+  margin-top: 5px;
+}
+
+.materials img {
+  margin-top: 4px;
+}
+
+.tools img {
+  margin-top: 6px;
+}
+
+.machinery img {
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.discount img {
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.delivery img {
+  margin-top: 3px;
+  margin-left: 1px;
 }
 
 .promo-button {
@@ -562,6 +623,11 @@ img {
   color: var(--white-basic);
   background-color: var(--red-basic);
   box-sizing: border-box;
+}
+
+.materials .card-goods-new {
+  padding-top: 8px;
+  padding-left: 38px;
 }
 
 .promo-card .promo-button:hover {
@@ -633,8 +699,8 @@ img {
 .slider-control-arrows {
   z-index: 1;
   position: absolute;
-  top: 143px;
-  left: 50%;
+  top: 144px;
+  left: 313px;
   display: flex;
   justify-content: space-between;
   width: 93%;
@@ -650,7 +716,7 @@ img {
 .slide-drill h3,
 .slide-perfs h3 {
   position: absolute;
-  top: 23px;
+  top: 20px;
   left: 24px;
   font-size: 36px;
   color: white;
@@ -660,8 +726,9 @@ img {
 .slide-drill p,
 .slide-perfs p {
   position: absolute;
-  top: 50px;
+  top: 48px;
   left: 24px;
+  font-size: 18px;
   color: white;
 }
 
@@ -692,7 +759,7 @@ img {
   display: block;
   width: 192px;
   height: 38px;
-  padding: 10px 0;
+  padding: 11px 0;
   box-sizing: border-box;
   text-align: center;
   color: var(--white-basic);
@@ -774,20 +841,20 @@ img {
 .bfg-img-9000 {
   margin-top: 5px;
   margin-left: 17px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .bfg-img-3000,
 .bfg-img-2000 {
   margin-top: 28px;
   margin-left: 39px;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 
 .bfg-img-6000 {
   margin-top: 21px;
   margin-left: 32px;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 }
 
 .catalog-item .catalog-item-buttons {
@@ -1083,10 +1150,11 @@ img {
 
 .services-slider label {
   display: flex;
-  align-items: center;
   width: 240px;
   height: 63px;
+  padding-top: 20px;
   padding-left: 22px;
+  font-weight: 700;
   font-size: 21px;
   color: var(--white-basic);
   background-color: var(--dark-basic);
@@ -1147,6 +1215,11 @@ img {
 
 .services-credit p {
   margin-bottom: 28px;
+}
+
+.services-credit img {
+  position: absolute;
+  right: -10px;
 }
 
 #btn-1:checked ~ .services-slider label[for="btn-1"] {
@@ -1401,7 +1474,8 @@ img {
 .feedback-button {
   display: block;
   width: 460px;
-  height: 38px;
+  height:
+   38px;
   margin: 37px auto;
   padding: 10px 0;
   box-sizing: border-box;
@@ -1414,7 +1488,8 @@ img {
 }
 
 .modal-feedback .feedback-close,
-.map-close {
+.map-close,
+.modal-close {
   position: absolute;
   top: 21px;
   right: 11px;
@@ -1426,7 +1501,7 @@ img {
 .map-popup {
   position: absolute;
   top: -60px;
-  left: calc(50% - 471.5px);
+  left: calc(50% - 480px);
   display: none;
   width: 943px;
   height: 449px;
@@ -1436,14 +1511,15 @@ img {
 }
 
 .map-popup div {
-  width: 100%;
+  width: 940;
   height: 7px;
   background-color: var(--red-basic);
 }
 
-.map-popup img {
+.map-popup iframe {
   width: 943px;
   height: 442px;
+  border: none;
 }
 
 .map-show {
@@ -2163,7 +2239,7 @@ img {
 .good-in-basket {
   position: fixed;
   top: 160px;
-  left: calc(50% - 410px);
+  left: calc(50% - 310px);
   display: none;
   width: 620px;
   height: 282px;
