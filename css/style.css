@@ -256,7 +256,7 @@ img {
 }
 
 .catalog-cart {
-  padding-left: 40px;
+  padding-left: 46px;
   background-color: var(--red-basic);
 }
 
@@ -277,7 +277,7 @@ img {
 }
 
 .catalog-cart-icon {
-  left: 18px;
+  left: 23px;
 }
 
 .header-bookmarks:hover .bookmark-icon,
@@ -617,7 +617,6 @@ img {
   padding-top: 7px;
   padding-left: 35px;
   transform: rotate(45deg);
-  overflow: hidden;
   font-size: 14px;
   text-transform: uppercase;
   color: var(--white-basic);
@@ -848,7 +847,7 @@ img {
 .bfg-img-2000 {
   margin-top: 28px;
   margin-left: 39px;
-  margin-bottom: 37px;
+  margin-bottom: 36px;
 }
 
 .bfg-img-6000 {
@@ -940,7 +939,7 @@ img {
 }
 
 .bfg-6000-caption {
-  margin: 1px 30px 5px 31px;
+  margin: 0px 30px 5px 31px;
   text-align: center;
 }
 
@@ -1216,10 +1215,46 @@ img {
 .services-credit p {
   margin-bottom: 28px;
 }
-
+/*
 .services-credit img {
   position: absolute;
   right: -10px;
+}
+*/
+.services-delivery::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/services/delivery.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.services-guarantee::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  width: 389px;
+  height: 283px;
+  background-image: url("../img/services/guarantee.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.services-credit::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 468px;
+  height: 261px;
+  background-image: url("../img/services/credit.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 #btn-1:checked ~ .services-slider label[for="btn-1"] {
@@ -1678,16 +1713,19 @@ img {
 }
 
 .profile-container div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   height: 45px;
+  position: relative;
   margin-bottom: 7px;
+  padding-top: 10px;
+  padding-left: 56px;
   background-color: var(--white-basic);
+  box-sizing: border-box;
 }
 
-.profile-container p {
-  font-size: 21px;
+.profile-icon-user {
+  position: absolute;
+  top: 13px;
+  left: 15px;
 }
 
 .profile-icon:hover path {
@@ -1698,15 +1736,27 @@ img {
   fill: var(--greylight);
 }
 
+.profile-link p {
+  margin: 0;
+  font-size: 21px;
+}
+
 .profile-link:active p {
   color: var(--greylight);
+}
+
+.profile-icon-exit {
+  position: absolute;
+  top: 14px;
+  right: 17px;
 }
 
 .profile-container ul {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  padding-left: 5px;
+  padding-left: 28px;
+  padding-right: 29px;
   list-style: none;
   color: var(--dark-basic);
 }
@@ -1722,7 +1772,7 @@ img {
 .catalog-header-circle {
   position: absolute;
   top: 8px;
-  left: 135px;
+  left: 133px;
 }
 
 /*==================================================Основное содержимое каталога ====================================*/
@@ -1800,7 +1850,7 @@ img {
 .catalog-wrapper h2:first-of-type {
   grid-column: 1 / -1;
   margin: 0;
-  height: 89px;
+  height: 90px;
   padding-top: 29px;
   padding-left: 29px;
   box-sizing: border-box;
@@ -1850,9 +1900,6 @@ img {
   box-sizing: border-box;
   border-bottom: 1px solid var(--mercury);
 }
-
-
-
 
 .filter-price legend,
 .filter-manufacterers legend,
@@ -1935,19 +1982,25 @@ img {
 .filter-form .filter-manufacterers {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   width: 220px;
   height: 251px;
-  margin-bottom: 26px;
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--mercury);
+}
+
+.filter-manufacterers legend {
+  margin-bottom: 22px;
 }
 
 .filter-manufacterers ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   height: 179px;
   list-style: none;
+}
+
+.filter-manufacterers li {
+  margin-bottom: 22px;
 }
 
 .filter-option {
@@ -2000,14 +2053,18 @@ img {
 .filter-form .supply {
   width: 220px;
   height: 116.85px;
+  margin-bottom: 30px;
   border: none;
   box-sizing: border-box;
+}
+
+.supply legend {
+  margin-bottom: 28px;
 }
 
 .supply div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   height: 66px;
   list-style: none;
 }
@@ -2017,6 +2074,10 @@ img {
   display: block;
   cursor: pointer;
   user-select: none;
+}
+
+.supply .filter-option label {
+  margin-bottom: 26px;
 }
 
 .filter-input-radio + label::before {
@@ -2081,7 +2142,7 @@ img {
   grid-column: 2 / 3;
   position: relative;
   display: grid;
-  gap: 20px;
+  gap: 0px;
   width: 700px;
 }
 
@@ -2092,6 +2153,7 @@ img {
   display: flex;
   align-items: center;
   height: 38px;
+  margin-bottom: 29px;
   padding-left: 19px;
   padding-right: 17px;
   font-size: 13px;
@@ -2156,6 +2218,7 @@ img {
   grid-column: 1 / -1;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 8px;
   list-style: none;
   font-family: "PTSans", "Arial", sans-serif;
 }
@@ -2166,14 +2229,14 @@ img {
 
 .catalog-list .catalog-item:not(:nth-child(3n)) {
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 /*=========================================================== Пагинация ===========================================================*/
 
 .pagination {
   grid-column: 2 / -1;
   display: flex;
-  margin-bottom: 59px;
+  margin-bottom: 60px;
   list-style: none;
 }
 
@@ -2211,14 +2274,10 @@ img {
   background-color: var(--neutral-basic);
 }
 
-.about-perfs .wrapper {
-
-}
-
 .about-perfs h2 {
   margin: 0;
-  margin-bottom: 25px;
-  padding-top: 64px;
+  margin-bottom: 21px;
+  padding-top: 63px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: normal;
@@ -2227,10 +2286,10 @@ img {
 
 .about-perfs p {
   margin: 0;
-  padding-bottom: 68px;
+  padding-bottom: 67px;
   font-family: "PTSans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 24px;
+  line-height: 25px;
 }
 
 /*====================================================== Попап о добавлении товара в корзину ===========================================*/
