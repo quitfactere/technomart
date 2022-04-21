@@ -1,24 +1,20 @@
 const buyButton = document.querySelector('.buy');
 const goodInBasket = document.querySelector('.good-in-basket');
-const goodInBasketClose = goodInBasket.querySelector('.map-close');
+const goodInBasketClose = goodInBasket.querySelector('.modal-close');
 
-buyButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
+buyButton.onclick = function () {
   goodInBasket.classList.add('good-in-basket-show');
-});
-
-mapClose.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  mapPopup.classList.toggle('map-show');
-});
-
-//Добавим обработчик события, который будет отлавливать нажатие кнопки Esc и в случае, если модальное окно открыто, закрывать его.
+};
+ 
+goodInBasketClose.onclick = function () {
+    goodInBasket.classList.remove('good-in-basket-show');
+};
 
 window.addEventListener('keydown', function(evt) {
-  if (evt.keyCode === 27) {
-    if (mapPopup.classList.contains('map-show')) {
-      evt.preventDefault();
-      mapPopup.classList.remove('map-show');
+    if (evt.keyCode === 27) {
+      if (goodInBasket.classList.contains('good-in-basket-show')) {
+        evt.preventDefault();
+        goodInBasket.classList.remove('good-in-basket-show');
+      }
     }
-  }
-});
+  });
