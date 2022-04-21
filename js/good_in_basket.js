@@ -1,11 +1,13 @@
-const buyButton = document.querySelector('.buy');
+const buyButtons = document.querySelectorAll('.buy');
 const goodInBasket = document.querySelector('.good-in-basket');
 const goodInBasketClose = goodInBasket.querySelector('.modal-close');
 
-buyButton.onclick = function () {
-  goodInBasket.classList.add('good-in-basket-show');
-};
- 
+for (var i = 0; i < buyButtons.length; i++) {
+  buyButtons[i].addEventListener('click', function() {
+    goodInBasket.classList.add('good-in-basket-show');
+  });
+}
+
 goodInBasketClose.onclick = function () {
     goodInBasket.classList.remove('good-in-basket-show');
 };
